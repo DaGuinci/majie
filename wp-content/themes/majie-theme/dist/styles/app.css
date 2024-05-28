@@ -1,0 +1,239 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  src: url("../fonts/brandon_reg-webfont.woff2") format("woff2"), url("../fonts/brandon_reg-webfont.woff") format("woff");
+  font-display: swap; }
+@font-face {
+  font-family: 'Cera PRO bold';
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/CeraPro-Bold.woff2") format("woff2"), url("../fonts/CeraPro-Bold.woff") format("woff");
+  font-display: swap; }
+@font-face {
+  font-family: 'SilkSerif Medium';
+  font-weight: 400;
+  src: url("../fonts/silkserif-medium-webfont.woff2") format("woff2"), url("../fonts/silkserif-medium-webfont.woff") format("woff");
+  font-display: swap; }
+.header-background {
+  background-color: white;
+  padding-top: 20px; }
+  .header-background .header {
+    position: relative;
+    width: 56%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 1070px) {
+      .header-background .header {
+        width: 70%; } }
+    .header-background .header__left {
+      width: 74%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 25% 0 5%;
+      background-image: url("../images/header_bg.png");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 85%; }
+      .header-background .header__left svg {
+        width: 21%;
+        height: auto; }
+      .header-background .header__left .large__menu {
+        position: absolute;
+        width: 69.1%;
+        height: 33%; }
+        @media (max-width: 768px) {
+          .header-background .header__left .large__menu {
+            display: none; } }
+        .header-background .header__left .large__menu .menu-menu-header-container {
+          height: 100%; }
+          .header-background .header__left .large__menu .menu-menu-header-container .menu {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            list-style: none; }
+            .header-background .header__left .large__menu .menu-menu-header-container .menu .menu-item {
+              width: 21%;
+              text-align: center;
+              padding: 0 1.5%;
+              box-sizing: border-box; }
+              .header-background .header__left .large__menu .menu-menu-header-container .menu .menu-item a {
+                font-size: 1rem;
+                vertical-align: middle;
+                font-family: "Montserrat", sans-serif;
+                text-decoration: none;
+                color: #000000;
+                font-weight: 700; }
+                @media (max-width: 1280px) {
+                  .header-background .header__left .large__menu .menu-menu-header-container .menu .menu-item a {
+                    font-size: 0.9rem; } }
+              .header-background .header__left .large__menu .menu-menu-header-container .menu .menu-item:first-child a, .header-background .header__left .large__menu .menu-menu-header-container .menu .menu-item:last-child a {
+                color: #ffffff; }
+    .header-background .header__logo {
+      width: 33%;
+      height: auto;
+      margin-top: 25px;
+      background-image: url("../images/logo.png");
+      background-size: contain;
+      background-repeat: no-repeat; }
+    .header-background .header::after {
+      content: "";
+      position: absolute;
+      width: 115.7%;
+      bottom: 0;
+      left: -8%;
+      border: 1px solid #0a71b4; }
+  .header-background .burger {
+    display: none;
+    position: fixed;
+    left: 20px;
+    top: 32px;
+    width: 5%;
+    height: 5%;
+    background-image: url("../images/Burger.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; }
+    @media (max-width: 768px) {
+      .header-background .burger {
+        display: block; } }
+    .header-background .burger.is-hidden {
+      transform: translateX(-200%); }
+  .header-background .small__menu__content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff90;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; }
+    .header-background .small__menu__content.is-hidden {
+      transform: translateX(-100%); }
+    @media (max-width: 768px) {
+      .header-background .small__menu__content {
+        display: block; } }
+    .header-background .small__menu__content .back {
+      position: absolute;
+      left: 5px;
+      top: 28px;
+      width: 16%;
+      height: 16%;
+      background-image: url("../images/Back.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      cursor: pointer; }
+    .header-background .small__menu__content .menu-menu-header-container .menu {
+      display: flex;
+      flex-direction: column;
+      list-style: none; }
+      .header-background .small__menu__content .menu-menu-header-container .menu .menu-item {
+        padding: 6px 9px;
+        border-bottom: 1px solid #267fff; }
+        .header-background .small__menu__content .menu-menu-header-container .menu .menu-item a {
+          font-family: "Montserrat", sans-serif;
+          text-decoration: none;
+          color: #267fff;
+          font-weight: 700; }
+
+.article {
+  width: 65%;
+  margin: auto;
+  padding-top: 3%;
+  background-image: url("../images/content_bg.png");
+  background-repeat: no-repeat;
+  background-position-x: 23.2%;
+  background-size: 50.6%; }
+  @media (max-width: 1070px) {
+    .article {
+      width: 90%;
+      background-position-x: 28%;
+      background-size: 45.7%; } }
+  .article__content__thumbnails {
+    margin-left: 7.7%; }
+    @media (max-width: 1070px) {
+      .article__content__thumbnails {
+        margin: auto;
+        text-align: center; } }
+    .article__content__thumbnails img {
+      max-width: 53%;
+      border-radius: 5%; }
+      @media (max-width: 1070px) {
+        .article__content__thumbnails img {
+          max-width: 80%; } }
+  .article__content__text {
+    margin-left: 11%;
+    display: flex; }
+    @media (max-width: 1070px) {
+      .article__content__text {
+        flex-direction: column;
+        align-items: center;
+        margin: 0; } }
+    .article__content__text__circles {
+      display: flex;
+      flex-direction: column; }
+      @media (max-width: 1070px) {
+        .article__content__text__circles {
+          display: none; } }
+      .article__content__text__circles svg {
+        margin-top: 15px; }
+    .article__content__text__content {
+      margin-left: 5%;
+      width: 70%;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      text-align: justify;
+      line-height: 2.5rem;
+      color: #7a003c;
+      font-weight: bold; }
+      @media (max-width: 1070px) {
+        .article__content__text__content {
+          margin: 0;
+          width: 90%;
+          font-size: 1.2rem;
+          line-height: 1.7rem; } }
+      @media (max-width: 768px) {
+        .article__content__text__content {
+          font-size: 0.8rem;
+          line-height: 1.2rem; } }
+      @media (max-width: 768px) {
+        .article__content__text__content__title {
+          font-size: 1rem;
+          line-height: 1rem; } }
+
+.majieFooter {
+  width: 56%;
+  margin: auto;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .majieFooter__menu .menu-footer-menu-container {
+    height: 100%; }
+    .majieFooter__menu .menu-footer-menu-container .menu {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center; }
+      .majieFooter__menu .menu-footer-menu-container .menu .menu-item a {
+        font-size: 1rem;
+        vertical-align: middle;
+        font-family: "Montserrat", sans-serif;
+        text-decoration: underline;
+        color: #000000;
+        font-weight: 700; }
+        @media (max-width: 1280px) {
+          .majieFooter__menu .menu-footer-menu-container .menu .menu-item a {
+            font-size: 0.9rem; } }
+
+body {
+  margin: 0;
+  background-color: #E1F5FD; }
+
+/*# sourceMappingURL=app.css.map */
