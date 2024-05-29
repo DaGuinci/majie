@@ -75,6 +75,9 @@
 
         }
 
+        .has-large-font-size {
+          line-height: 2.7rem;
+        }
         p {
           // font-family: $main-font;
           // font-size: 1.5rem;
@@ -86,6 +89,8 @@
           @media (max-width: $large) {
             font-size: 1.2rem;
             line-height: 1.7rem;
+
+
           }
         }
       }
