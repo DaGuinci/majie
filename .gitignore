@@ -1,5 +1,6 @@
 .env
 vendor/
+MYREADME.md
 
 /wp-admin/
 /wp-content/index.php
