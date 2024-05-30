@@ -1,6 +1,7 @@
 .env
 vendor/
 MYREADME.md
+.htaccess
 
 /wp-admin/
 /wp-content/index.php
