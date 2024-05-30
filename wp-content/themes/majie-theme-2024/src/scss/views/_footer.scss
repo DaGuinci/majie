@@ -1,0 +1,38 @@
+.majieFooter {
+  width: 56%;
+  margin: auto;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__menu {
+
+    .menu-footer-menu-container {
+      height: 100%;
+
+      .menu {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        .menu-item {
+
+          a {
+            font-size: 1rem;
+            vertical-align: middle;
+            font-family: $main-font;
+            text-decoration: underline;
+            color: $black;
+            font-weight: 700;
+
+            @media (max-width: $xlarge) {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

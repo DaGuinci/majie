@@ -1,0 +1,14 @@
+.header {
+  height: 100vh;
+
+  .picture {
+    position: relative;
+    height: 100%;
+    background-size: 110vw;
+    transition: background-size 1s;
+
+    &.visible {
+      background-size: 100vw;
+    }
+  }
+}
