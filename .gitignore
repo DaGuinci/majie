@@ -28,3 +28,9 @@ MYREADME.md
 
 # htaccess
 /.htaccess
+
+# npm
+/node_modules/
+package.json
+package-lock.json
+webpack.config.js
