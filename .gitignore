@@ -30,7 +30,7 @@ MYREADME.md
 /.htaccess
 
 # npm
-/node_modules/
+node_modules/
 package.json
 package-lock.json
 webpack.config.js

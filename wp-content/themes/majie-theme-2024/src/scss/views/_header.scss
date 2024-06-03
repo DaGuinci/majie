@@ -6,6 +6,7 @@
     height: 100%;
     background-size: 110vw;
     transition: background-size 1s;
+    background: black;
 
     &.visible {
       background-size: 100vw;

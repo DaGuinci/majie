@@ -49,24 +49,7 @@ $secondary-font:   'SilkSerif Medium', sans-serif;
   font-family:   'Montserrat';
   // font-weight:   700;
   font-style:    normal;
-  src: url("../fonts/brandon_reg-webfont.woff2") format("woff2"),
-      url("../fonts/brandon_reg-webfont.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family:   'Cera PRO bold';
-  font-weight:   700;
-  font-style:    normal;
-  src: url("../fonts/CeraPro-Bold.woff2") format("woff2"),
-      url("../fonts/CeraPro-Bold.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SilkSerif Medium';
-  font-weight:   400;
-  src: url("../fonts/silkserif-medium-webfont.woff2") format("woff2"),
-      url("../fonts/silkserif-medium-webfont.woff") format("woff");
+  src: url('../../dist/fonts/brandon_reg-webfont.woff2') format("woff2"),
+      url('../../dist/fonts/brandon_reg-webfont.woff') format("woff");
   font-display: swap;
 }

@@ -1,20 +1,10 @@
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/app.scss ***!
+  \************************************************************************************************************/
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
-  src: url("../fonts/brandon_reg-webfont.woff2") format("woff2"), url("../fonts/brandon_reg-webfont.woff") format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Cera PRO bold";
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/CeraPro-Bold.woff2") format("woff2"), url("../fonts/CeraPro-Bold.woff") format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SilkSerif Medium";
-  font-weight: 400;
-  src: url("../fonts/silkserif-medium-webfont.woff2") format("woff2"), url("../fonts/silkserif-medium-webfont.woff") format("woff");
+  src: url(../scripts/../fonts/brandon_reg-webfont.woff2) format("woff2"), url(../scripts/../fonts/brandon_reg-webfont.woff) format("woff");
   font-display: swap;
 }
 .header {
@@ -25,6 +15,7 @@
   height: 100%;
   background-size: 110vw;
   transition: background-size 1s;
+  background: black;
 }
 .header .picture.visible {
   background-size: 100vw;
@@ -34,7 +25,7 @@
   width: 65%;
   margin: auto;
   padding-top: 3%;
-  background-image: url("../images/content_bg.png");
+  background-image: url(../scripts/../images/content_bg.png);
   background-repeat: no-repeat;
   background-position-x: 23.2%;
   background-size: 50.6%;
@@ -148,5 +139,3 @@ body {
   margin: 0;
   background-color: #E1F5FD;
 }
-
-/*# sourceMappingURL=app.css.map */

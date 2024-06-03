@@ -29,8 +29,16 @@ foreach ( glob( THEME_PATH . "/inc/plugins/*/functions.php" ) as $plugin ) {
  * Enqueue scripts
  */
 
-function fp_enqueue_script()
-{
-    wp_enqueue_script('main',          JS_URL . '/bundle.js',  array('jquery'), '1.0.0', true);
-}
-add_action('wp_enqueue_scripts', 'fp_enqueue_script');
+// register webpack compiled js and css with theme
+function enqueue_webpack_scripts() {
+
+    $cssFilePath = glob( get_template_directory() . '/dist/styles/main.min.*.css' );
+    $cssFileURI = get_template_directory_uri() . '/dist/styles/' . basename($cssFilePath[0]);
+    wp_enqueue_style( 'main_css', $cssFileURI );
+
+    $jsFilePath = glob( get_template_directory() . '/dist/scripts/main.min.*.js' );
+    $jsFileURI = get_template_directory_uri() . '/dist/scripts/' . basename($jsFilePath[0] ?? '');
+    wp_enqueue_script( 'main_js', $jsFileURI , null , null , true );
+
+  }
+  add_action( 'wp_enqueue_scripts', 'enqueue_webpack_scripts' );

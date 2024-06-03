@@ -1,8 +1,4 @@
 import menuResponsive from './menuResponsive.js';
 
-var homeSlider = require('home/home-slider.js')
+var homeSlider = require('./home/homeSlider.js')
 homeSlider()
-//
-// jQuery(document).ready(function ($) {
-//   homeSlider()
-// })
