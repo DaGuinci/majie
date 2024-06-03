@@ -8,11 +8,11 @@
 /**
  * Enqueue style
  */
-function my_style() {
-    $file = 'app.css';
-    wp_enqueue_style( 'style-main', CSS_URL . '/' . $file );
-}
-add_action( 'wp_enqueue_scripts',  'my_style' );
+// function my_style() {
+//     $file = 'app.css';
+//     wp_enqueue_style( 'style-main', CSS_URL . '/' . $file );
+// }
+// add_action( 'wp_enqueue_scripts',  'my_style' );
 
 function majie_theme_support() {
   add_theme_support(

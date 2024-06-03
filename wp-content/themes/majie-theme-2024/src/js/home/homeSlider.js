@@ -1,4 +1,4 @@
 module.exports = function () {
-  alert ('hello !');
+  alert ('hello folks!');
   return "Hello buddy!";
 }

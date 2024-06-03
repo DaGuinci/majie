@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menuResponsive_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menuResponsive.js */ \"./src/js/menuResponsive.js\");\n/* harmony import */ var _menuResponsive_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_menuResponsive_js__WEBPACK_IMPORTED_MODULE_0__);\n\nvar homeSlider = __webpack_require__(/*! ./home/homeSlider.js */ \"./src/js/home/homeSlider.js\");\nhomeSlider();\nalert('Hello world');\n//\n// jQuery(document).ready(function ($) {\n//   homeSlider()\n// })\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menuResponsive_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menuResponsive.js */ \"./src/js/menuResponsive.js\");\n/* harmony import */ var _menuResponsive_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_menuResponsive_js__WEBPACK_IMPORTED_MODULE_0__);\n\nvar homeSlider = __webpack_require__(/*! ./home/homeSlider.js */ \"./src/js/home/homeSlider.js\");\nhomeSlider();\n_menuResponsive_js__WEBPACK_IMPORTED_MODULE_0___default()();\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/app.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _men
   \***********************************/
 /***/ ((module) => {
 
-eval("module.exports = function () {\n  alert('hello !');\n  return \"Hello buddy!\";\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/home/homeSlider.js?");
+eval("module.exports = function () {\n  alert('hello folks!');\n  return \"Hello buddy!\";\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/home/homeSlider.js?");
 
 /***/ }),
 
