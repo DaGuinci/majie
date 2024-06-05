@@ -12,15 +12,18 @@ $slider_pictures = get_field('home_slider');
 ?>
 <body>
   <section class="header">
+    <div class="header__title">
+
+    </div>
     <?php
       if ($slider_pictures) {
         $i = 0;
         foreach ($slider_pictures as $slider_picture => $url) {
           if ($url) {
-            $trans = -100*$i."vh";
+            $trans = -100*($i+1)."vh";
             $z = 100-$i
             ?>
-            <div class="picture <?= ($i==0) ? 'visible': ''; ?>" style="
+            <div class="picture" style="
               background-image:url(<?= $url ?>);
               transform: translateY(<?= $trans ?>);
               z-index: <?= $z ?>;

@@ -35,7 +35,7 @@ eval("module.exports = function () {\n  const burger = document.querySelector('.
   \***********************************/
 /***/ ((module) => {
 
-eval("module.exports = function () {\n  const pictures = document.querySelectorAll('.header .picture');\n  function switch_picture() {\n    let visible = document.querySelector('.picture.visible');\n    let next = visible.nextElementSibling;\n    if (next.classList.contains('picture')) {\n      next.classList.toggle('visible');\n    } else {\n      let first = document.querySelector('.header .picture');\n      first.classList.toggle('visible');\n    }\n    visible.classList.toggle('visible');\n  }\n  setInterval(function () {\n    switch_picture();\n  }, 1000);\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/home/homeSlider.js?");
+eval("module.exports = function () {\n  const pictures = document.querySelectorAll('.header .picture');\n  pictures[0].classList.add('visible');\n  function switch_picture() {\n    let visible = document.querySelector('.picture.visible');\n    let next = visible.nextElementSibling;\n    if (next.classList.contains('picture')) {\n      next.classList.toggle('visible');\n    } else {\n      let first = document.querySelector('.header .picture');\n      first.classList.toggle('visible');\n    }\n    visible.classList.toggle('visible');\n  }\n  setInterval(function () {\n    switch_picture();\n  }, 4000);\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/home/homeSlider.js?");
 
 /***/ }),
 

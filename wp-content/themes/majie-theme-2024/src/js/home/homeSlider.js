@@ -1,5 +1,6 @@
 module.exports = function () {
   const pictures = document.querySelectorAll('.header .picture');
+  pictures[0].classList.add('visible')
 
   function switch_picture() {
     let visible = document.querySelector('.picture.visible')
@@ -15,5 +16,5 @@ module.exports = function () {
 
   setInterval(function() {
     switch_picture()
-  }, 1000);
+  }, 4000);
 }
