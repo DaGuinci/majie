@@ -16,9 +16,11 @@
   background-size: 110vw;
   transition: background-size 1s;
   background: black;
+  background-size: 100vw;
+  opacity: 0;
 }
 .header .picture.visible {
-  background-size: 100vw;
+  opacity: 100;
 }
 
 .article {

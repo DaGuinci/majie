@@ -1,6 +1,5 @@
-import menuResponsive from './menuResponsive.js';
-
 var homeSlider = require('./home/homeSlider.js')
+var menuResponsive = require('./global/menuResponsive.js')
 
 homeSlider()
 menuResponsive()

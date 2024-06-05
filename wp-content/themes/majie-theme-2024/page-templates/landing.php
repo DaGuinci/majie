@@ -7,20 +7,6 @@ $slider_pictures = get_field('home_slider');
 ?>
 <div class="article">
   <div class="article__content">
-    <div class="article__content__thumbnails">
-      <?php
-      if ($slider_pictures) {
-        foreach ($slider_pictures as $slider_picture => $url) {
-          if ($url) { ?>
-            <img
-              class="sliderPic"
-              src="<?= $url ?>"
-              alt="Photo majie"
-            >
-          <?php }
-        }
-      }?>
-    </div>
     <div class="article__content__text">
       <div class="article__content__text__circles">
         <?php for( $i = 0 ; $i < 12 ; $i++ ) { ?>

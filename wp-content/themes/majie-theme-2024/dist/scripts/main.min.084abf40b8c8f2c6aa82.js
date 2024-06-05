@@ -13,10 +13,19 @@
 /*!***********************!*\
   !*** ./src/js/app.js ***!
   \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menuResponsive_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menuResponsive.js */ \"./src/js/menuResponsive.js\");\n/* harmony import */ var _menuResponsive_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_menuResponsive_js__WEBPACK_IMPORTED_MODULE_0__);\n\nvar homeSlider = __webpack_require__(/*! ./home/homeSlider.js */ \"./src/js/home/homeSlider.js\");\nhomeSlider();\n_menuResponsive_js__WEBPACK_IMPORTED_MODULE_0___default()();\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/app.js?");
+eval("var homeSlider = __webpack_require__(/*! ./home/homeSlider.js */ \"./src/js/home/homeSlider.js\");\nvar menuResponsive = __webpack_require__(/*! ./global/menuResponsive.js */ \"./src/js/global/menuResponsive.js\");\nhomeSlider();\nmenuResponsive();\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/app.js?");
+
+/***/ }),
+
+/***/ "./src/js/global/menuResponsive.js":
+/*!*****************************************!*\
+  !*** ./src/js/global/menuResponsive.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+eval("module.exports = function () {\n  const burger = document.querySelector('.burger');\n  const menu = document.querySelector('.small__menu__content');\n  const back = document.querySelector('.back');\n  burger.addEventListener('click', function () {\n    menu.classList.remove('is-hidden');\n    burger.classList.add('is-hidden');\n  });\n  back.addEventListener('click', function () {\n    menu.classList.add('is-hidden');\n    burger.classList.remove('is-hidden');\n  });\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/global/menuResponsive.js?");
 
 /***/ }),
 
@@ -26,17 +35,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _men
   \***********************************/
 /***/ ((module) => {
 
-eval("module.exports = function () {\n  alert('hello folks!');\n  return \"Hello buddy!\";\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/home/homeSlider.js?");
-
-/***/ }),
-
-/***/ "./src/js/menuResponsive.js":
-/*!**********************************!*\
-  !*** ./src/js/menuResponsive.js ***!
-  \**********************************/
-/***/ (() => {
-
-eval("function menuResponsive() {\n  const burger = document.querySelector('.burger');\n  const menu = document.querySelector('.small__menu__content');\n  const back = document.querySelector('.back');\n  burger.addEventListener('click', function () {\n    menu.classList.remove('is-hidden');\n    burger.classList.add('is-hidden');\n  });\n  back.addEventListener('click', function () {\n    menu.classList.add('is-hidden');\n    burger.classList.remove('is-hidden');\n  });\n}\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/menuResponsive.js?");
+eval("module.exports = function () {\n  const pictures = document.querySelectorAll('.header .picture');\n  function switch_picture() {\n    let visible = document.querySelector('.picture.visible');\n    let next = visible.nextElementSibling;\n    if (next.classList.contains('picture')) {\n      next.classList.toggle('visible');\n    } else {\n      let first = document.querySelector('.header .picture');\n      first.classList.toggle('visible');\n    }\n    visible.classList.toggle('visible');\n  }\n  setInterval(function () {\n    switch_picture();\n  }, 1000);\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/home/homeSlider.js?");
 
 /***/ }),
 
@@ -78,35 +77,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports

@@ -20,7 +20,7 @@ $slider_pictures = get_field('home_slider');
             $trans = -100*$i."vh";
             $z = 100-$i
             ?>
-            <div class="picture visible" style="
+            <div class="picture <?= ($i==0) ? 'visible': ''; ?>" style="
               background-image:url(<?= $url ?>);
               transform: translateY(<?= $trans ?>);
               z-index: <?= $z ?>;

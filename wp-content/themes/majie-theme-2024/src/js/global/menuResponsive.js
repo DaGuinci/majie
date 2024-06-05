@@ -1,4 +1,4 @@
-function menuResponsive() {
+module.exports = function () {
     const burger = document.querySelector('.burger');
     const menu = document.querySelector('.small__menu__content');
     const back = document.querySelector('.back');
