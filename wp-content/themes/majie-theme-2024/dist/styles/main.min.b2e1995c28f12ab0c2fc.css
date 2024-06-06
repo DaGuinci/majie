@@ -375,7 +375,7 @@
 .landing__partners {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
 }
 .landing__partners h3 {
   margin: auto;
@@ -408,6 +408,21 @@
 }
 .landing__partners__work .work_partners .partner__name {
   text-align: center;
+}
+.landing__partners__links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.landing__partners__links .links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.landing__partners__links .links .link {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 .majieFooter {

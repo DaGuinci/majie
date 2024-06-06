@@ -50,8 +50,8 @@ $content = get_the_content();
           $partner = $partners['work']['partner_'.$i];
           if ($partner['name']) {
             if ($partner['web']) { ?>
-            <a class="partner" href="<?= $partner['web'] ?>" target="_blank">
-              <?php if ($partner['logo']) { ?>
+              <a class="partner" href="<?= $partner['web'] ?>" target="_blank">
+                <?php if ($partner['logo']) { ?>
                 <img class="partner__logo" src="<?= $partner['logo'] ?>" alt="logo">
                 <?php }; ?>
                 <p class="partner__name"><?= $partner['name']; ?></p>
@@ -70,22 +70,17 @@ $content = get_the_content();
     </div>
     <div class="landing__partners__links">
       <h3><?= $partners['links']['title']; ?></h3>
-      <div class="work_partners">
-        <?php for ($i=1; $i < sizeof($partners['work'])-1; $i++) {
-          $partner = $partners['work']['partner_'.$i];
-          if ($partner['web']) { ?>
-          <a class="partner" href="<?= $partner['web'] ?>" target="_blank">
-            <?php if ($partner['logo']) { ?>
-              <img class="partner__logo" src="<?= $partner['logo'] ?>" alt="logo">
+      <div class="links">
+        <?php for ($i=1; $i < sizeof($partners['links'])-1; $i++) {
+          $link = $partners['links']['link_'.$i];
+          if ($link['web']) { ?>
+            <div class="link">
+              <?php if ($link['logo']) { ?>
+              <img class="link__logo" src="<?= $link['logo'] ?>" alt="logo">
               <?php }; ?>
-              <p class="partner__name"><?= $partner['name']; ?></p>
-            </a>
-          <?php } else { ; ?>
-            <div class="partner">
-            <?php if ($partner['logo']) { ?>
-              <img class="partner__logo" src="<?= $partner['logo'] ?>" alt="logo">
-              <?php }; ?>
-              <p class="partner__name"><?= $partner['name']; ?></p>
+              <a class="link" href="<?= $link['web'] ?>" target="_blank">
+                <p class="link__name"><?= $link['name']; ?></p>
+              </a>
             </div>
           <?php }; ?>
         <?php }; ?>

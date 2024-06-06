@@ -50,7 +50,7 @@
   &__partners {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 
     h3 {
       margin: auto;
@@ -88,6 +88,26 @@
           }
         }
       }
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .link {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+        }
+
+      }
+
     }
   }
 }
