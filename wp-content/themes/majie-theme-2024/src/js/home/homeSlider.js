@@ -5,7 +5,7 @@ module.exports = function () {
   function switch_picture() {
     let visible = document.querySelector('.picture.visible')
     let next = visible.nextElementSibling
-    if (next.classList.contains('picture')) {
+    if (next) {
       next.classList.toggle('visible')
     } else {
       let first = document.querySelector('.header .picture')

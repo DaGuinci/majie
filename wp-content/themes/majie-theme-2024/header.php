@@ -12,8 +12,15 @@ $slider_pictures = get_field('home_slider');
 ?>
 <body>
   <section class="header">
-    <div class="header__title">
-
+    <div class="header__logo">
+      <div class="logo_container">
+        <div class="logo_part majie"></div>
+        <div class="logo_part montpellier"></div>
+        <div class="logo_part accueil"></div>
+        <div class="logo_part jeunes"></div>
+        <div class="logo_part isoles"></div>
+        <div class="logo_part etrangers"></div>
+      </div>
     </div>
     <?php
       if ($slider_pictures) {
@@ -33,8 +40,6 @@ $slider_pictures = get_field('home_slider');
           }
         }
       }?>
-    <div class="header__logo"></div>
-    <div class="header__name"></div>
   </section>
   <!-- <div class="small__menu"> -->
     <div class="burger"></div>
