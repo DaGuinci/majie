@@ -11,7 +11,7 @@
     .logo_container {
       position: relative;
       z-index: 1000;
-      height: 50%;
+      height: 60%;
       width: 64%;
 
       @media (min-width: $medium) {
@@ -27,11 +27,15 @@
       .majie {
         background-image: url('../../dist/images/majie.png');
 
-        animation-duration: .5s;
+        animation-duration: 1s;
         animation-name: fadein;
 
         @keyframes fadein {
           from {
+            opacity: 0;
+          }
+
+          50% {
             opacity: 0;
           }
 
