@@ -15,7 +15,7 @@
   \***********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var homeSlider = __webpack_require__(/*! ./home/homeSlider.js */ \"./src/js/home/homeSlider.js\");\nvar revealText = __webpack_require__(/*! ./home/revealText.js */ \"./src/js/home/revealText.js\");\nvar menuResponsive = __webpack_require__(/*! ./global/menuResponsive.js */ \"./src/js/global/menuResponsive.js\");\nhomeSlider();\nmenuResponsive();\nrevealText();\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/app.js?");
+eval("var homeSlider = __webpack_require__(/*! ./home/homeSlider.js */ \"./src/js/home/homeSlider.js\");\nvar revealText = __webpack_require__(/*! ./home/revealText.js */ \"./src/js/home/revealText.js\");\nvar menuResponsive = __webpack_require__(/*! ./global/menuResponsive.js */ \"./src/js/global/menuResponsive.js\");\nhomeSlider();\nmenuResponsive();\n// revealText()\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/app.js?");
 
 /***/ }),
 
