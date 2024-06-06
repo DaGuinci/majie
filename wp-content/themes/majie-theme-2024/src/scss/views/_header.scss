@@ -47,11 +47,6 @@
         background-position-y: 29.3vw;
         transform: translate(-0.7vw, -100%);
 
-        @media (min-width: $medium) {
-          background-size: 23vw 2.5vw;
-          background-position-y: 19.2vw;
-        }
-
 
         animation-duration: 2s;
         animation-name: mtpSlidein;
@@ -59,97 +54,127 @@
         @keyframes mtpSlidein {
           from {
             transform: translate(-100vw, -130%);
-            width: 300%;
+            // width: 300%;
             opacity: 0;
           }
 
           20% {
             transform: translate(-100vw, -130%);
-            width: 300%;
+            // width: 300%;
             opacity: 0;
           }
 
           50% {
             transform: translate(-0.7vw, -100%);
-            width: 100%;
+            // width: 100%;
           }
 
           to {
             transform: translate(-0.7vw, -100%);
-            width: 100%;
+            // width: 100%;
           }
+        }
+
+        @media (min-width: $medium) {
+          background-size: 23vw 2.5vw;
+          background-position-y: 19.2vw;
         }
       }
 
       .accueil {
         background-image: url('../../dist/images/accueil.png');
-        background-size: 34.4%;
-        background-position-y: 29vw;
-        transform: translate(44.7vw, -200%);
-
-        @media (min-width: $medium) {
-          background-size: 13vw 2.5vw;
-          background-position-y: 19.2vw;
-          transform: translate(30vw, -200%);
-        }
+        background-size: 91.4%;
+        background-position-y: 29.1vw;
+        transform: translate(45.3vw, -200%);
+        width: 23vw;
 
         animation-duration: 2s;
         animation-name: accSlidein;
 
         @keyframes accSlidein {
           from {
-            transform: translate(144vw, -230%);
-            width: 300%;
+            transform: translate(145.3vw, -230%);
+            width: 69vw;
             opacity: 0;
           }
 
           30% {
-            transform: translate(144vw, -230%);
-            width: 300%;
+            transform: translate(145.3vw, -230%);
+            width: 69vw;
             opacity: 0;
           }
 
           60% {
-            transform: translate(44.7vw, -200%);
-            width: 100%;
+            transform: translate(45.3vw, -200%);
+            width: 23vw;
           }
 
           to {
-            transform: translate(44.7vw, -200%);
-            width: 100%;
+            transform: translate(45.3vw, -200%);
+            width: 23vw;
+          }
+        }
+
+        @media (min-width: $medium) {
+          background-size: 13vw 2.5vw;
+          background-position-y: 19.2vw;
+          transform: translate(30vw, -200%);
+
+          @keyframes accSlidein {
+            from {
+              transform: translate(90vw, -230%);
+              width: 69vw;
+              opacity: 0;
+            }
+
+            30% {
+              transform: translate(90vw, -230%);
+              width: 69vw;
+              opacity: 0;
+            }
+
+            60% {
+              transform: translate(30vw, -200%);
+              width: 23vw;
+            }
+
+            to {
+              transform: translate(30vw, -200%);
+              width: 23vw;
+            }
           }
         }
       }
 
       .jeunes {
         background-image: url('../../dist/images/jeunes.png');
-        background-size: 26.8%;
-        background-position-y: 37.2vw;
-        transform: translate(-0.7vw, -300%);
+        background-size: 27.7%;
+        background-position-y: 37vw;
+        transform: translate(-1.7vw, -300%);
 
         animation-duration: 2s;
         animation-name: jeuSlidein;
 
         @keyframes jeuSlidein {
           from {
-            transform: translate(-100vw, -300%);
+            transform: translate(-100vw, -250%);
             width: 300%;
             opacity: 0;
           }
 
           40% {
-            transform: translate(-100vw, -300%);
+            transform: translate(-100vw, -250%);
             width: 300%;
             opacity: 0;
           }
 
           70% {
-            transform: translate(-0.7vw, -300%);
+            transform: translate(-1.7vw, -300%);
             width: 100%;
           }
 
           to {
-            transform: translate(-0.7vw, -300%);
+            transform: translate(-1.7vw, -300%);
             width: 100%;
           }
         }
@@ -158,39 +183,64 @@
           background-size: 11vw 2.5vw;
           background-position-y: 23.6vw;
           transform: translate(-0.7vw, -300%);
+
+          @keyframes jeuSlidein {
+            from {
+              transform: translate(-100vw, -250%);
+              width: 300%;
+              opacity: 0;
+            }
+
+            40% {
+              transform: translate(-100vw, -250%);
+              width: 300%;
+              opacity: 0;
+            }
+
+            70% {
+              transform: translate(-0.7vw, -300%);
+              width: 100%;
+            }
+
+            to {
+              transform: translate(-0.7vw, -300%);
+              width: 100%;
+            }
+          }
         }
       }
 
       .isoles {
         background-image: url('../../dist/images/isoles.png');
-        background-size: 24.9%;
-        background-position-y: 37.2vw;
-        transform: translate(20vw, -400%);
+        background-size: 56.5%;
+        background-position-y: 36.9vw;
+        transform: translate(18.8vw, -400%);
+        width: 30vw;
 
         animation-duration: 2s;
         animation-name: isoSlidein;
 
         @keyframes isoSlidein {
           from {
-            transform: translate(20vw, -350%);
-            width: 300%;
+            transform: translate(18.8vw, -350%);
+            width: 90vw;
             opacity: 0;
           }
 
           50% {
-            transform: translate(20vw, -350%);
-            width: 300%;
+            transform: translate(18.8vw, -350%);
+            width: 90vw;
             opacity: 0;
           }
 
           80% {
-            transform: translate(20vw, -400%);
-            width: 100%;
+            transform: translate(18.8vw, -400%);
+            width: 30vw;
           }
 
           to {
-            transform: translate(20vw, -400%);
-            width: 100%;
+            transform: translate(18.8vw, -400%);
+            width: 30vw;
           }
         }
 
@@ -198,46 +248,95 @@
           background-size: 11vw 2.5vw;
           background-position-y: 23.6vw;
           transform: translate(12.3vw, -400%);
+
+          @keyframes isoSlidein {
+            from {
+              transform: translate(18.8vw, -350%);
+              width: 90vw;
+              opacity: 0;
+            }
+
+            50% {
+              transform: translate(18.8vw, -350%);
+              width: 90vw;
+              opacity: 0;
+            }
+
+            80% {
+              transform: translate(12.3vw, -400%);
+              width: 30vw;
+            }
+
+            to {
+              transform: translate(12.3vw, -400%);
+              width: 30vw;
+            }
+          }
         }
       }
 
       .etrangers {
         background-image: url('../../dist/images/etrangers.png');
-        background-size: 42.9%;
-        background-position-y: 37.2vw;
-        transform: translate(39.4vw, -500%);
+        background-size: 96.82%;
+        background-position-y: 36.98vw;
+        transform: translate(37.9vw, -500%);
+        width: 30vw;
 
         animation-duration: 2s;
         animation-name: etrSlidein;
 
         @keyframes etrSlidein {
           from {
-            transform: translate(139.4vw, -500%);
-            width: 300%;
+            transform: translate(137.9vw, -450%);
+            width: 60vw;
             opacity: 0;
           }
 
           60% {
-            transform: translate(139.4vw, -500%);
-            width: 300%;
+            transform: translate(137.9vw, -450%);
+            width: 60vw;
             opacity: 0;
           }
 
           90% {
-            transform: translate(39.4vw, -500%);
-            width: 100%;
+            transform: translate(37.9vw, -500%);
+            width: 30vw;
           }
 
           to {
-            transform: translate(39.4vw, -500%);
-            width: 100%;
+            transform: translate(37.9vw, -500%);
+            width: 30vw;
           }
         }
 
         @media (min-width: $medium) {
-          background-size: 18vw 2.5vw;
-          background-position-y: 23.6vw;
+          background-size: 60.5%;
+          background-position-y: 23.57vw;
           transform: translate(25vw, -500%);
+
+          @keyframes etrSlidein {
+            from {
+              transform: translate(125vw, -450%);
+              width: 60vw;
+              opacity: 0;
+            }
+
+            60% {
+              transform: translate(125vw, -450%);
+              width: 60vw;
+              opacity: 0;
+            }
+
+            90% {
+              transform: translate(25vw, -500%);
+              width: 30vw;
+            }
+
+            to {
+              transform: translate(25vw, -500%);
+              width: 30vw;
+            }
+          }
         }
       }
     }
