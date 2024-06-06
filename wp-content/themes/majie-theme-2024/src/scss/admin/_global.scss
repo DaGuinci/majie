@@ -24,4 +24,11 @@ body {
     font-size: 1.4rem;
     border-radius: 5px;
   }
+
+  h3 {
+    display: inline-block;
+    border-bottom: 1px solid $color-secondary;
+    font-size: 1.4rem;
+    color: $color-secondary;
+  }
 }

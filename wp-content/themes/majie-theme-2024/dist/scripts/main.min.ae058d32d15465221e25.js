@@ -15,7 +15,7 @@
   \***********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var homeSlider = __webpack_require__(/*! ./home/homeSlider.js */ \"./src/js/home/homeSlider.js\");\nvar menuResponsive = __webpack_require__(/*! ./global/menuResponsive.js */ \"./src/js/global/menuResponsive.js\");\nhomeSlider();\nmenuResponsive();\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/app.js?");
+eval("var homeSlider = __webpack_require__(/*! ./home/homeSlider.js */ \"./src/js/home/homeSlider.js\");\nvar revealText = __webpack_require__(/*! ./home/revealText.js */ \"./src/js/home/revealText.js\");\nvar menuResponsive = __webpack_require__(/*! ./global/menuResponsive.js */ \"./src/js/global/menuResponsive.js\");\nhomeSlider();\nmenuResponsive();\nrevealText();\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/app.js?");
 
 /***/ }),
 
@@ -36,6 +36,16 @@ eval("module.exports = function () {\n  const burger = document.querySelector('.
 /***/ ((module) => {
 
 eval("module.exports = function () {\n  const pictures = document.querySelectorAll('.header .picture');\n  pictures[0].classList.add('visible');\n  function switch_picture() {\n    let visible = document.querySelector('.picture.visible');\n    let next = visible.nextElementSibling;\n    if (next) {\n      next.classList.toggle('visible');\n    } else {\n      let first = document.querySelector('.header .picture');\n      first.classList.toggle('visible');\n    }\n    visible.classList.toggle('visible');\n  }\n  setInterval(function () {\n    switch_picture();\n  }, 4000);\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/home/homeSlider.js?");
+
+/***/ }),
+
+/***/ "./src/js/home/revealText.js":
+/*!***********************************!*\
+  !*** ./src/js/home/revealText.js ***!
+  \***********************************/
+/***/ ((module) => {
+
+eval("module.exports = function () {\n  // texts = document.querySelectorAll('p');\n\n  function reveal() {\n    var texts = document.querySelectorAll(\".landing p\");\n    console.log(texts);\n    for (var i = 0; i < texts.length; i++) {\n      var windowHeight = window.innerHeight;\n      var elementTop = texts[i].getBoundingClientRect().top;\n      var elementVisible = 50;\n      if (elementTop < windowHeight - elementVisible) {\n        texts[i].classList.add(\"is-visible\");\n      } else {\n        texts[i].classList.remove(\"is-visible\");\n      }\n    }\n  }\n  window.addEventListener(\"scroll\", reveal);\n\n  // To check the scroll position on page load\n  reveal();\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/home/revealText.js?");
 
 /***/ }),
 
