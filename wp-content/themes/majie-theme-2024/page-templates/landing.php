@@ -22,6 +22,7 @@ $content = get_the_content();
   <?php }; ?>
     <a href="#partners_section" class="sticky_menu_entry">Nos partenaires</a>
     <a href="#support_section" class="sticky_menu_entry">Nous soutenir</a>
+    <a href="#contact_section" class="sticky_menu_entry">Nous contacter</a>
   </nav>
 <section class="landing">
   <?php if ($news['active'] && strlen($news['content']) > 0) { ?>
@@ -173,7 +174,12 @@ $content = get_the_content();
   <?php }; ?>
   </div>
   <div class="landing__contact" id="contact">
-    <?= do_shortcode('[contact-form-7 id="8cc6917" title="Contact form 1"]'); ?>
+    <div class="title">
+      <h2>
+        Nous contacter
+      </h2>
+    </div>
+    <?= do_shortcode('[contact-form-7 id="1cf32d4" title="Contact form fr"]'); ?>
   </div>
 </section>
 <?php

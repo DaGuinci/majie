@@ -35,11 +35,14 @@ body {
   .btn {
     display: inline-block;
     text-decoration: none;
-    text-decoration-style: n;
     background-color: #f29400;
     color: white;
     padding: 3px 10px;
     border-radius: 14px;
     margin: 7px;
+    border: none;
+    font-family: $main-font;
+    font-weight: 700;
+    line-height: 1.5rem;
   }
 }

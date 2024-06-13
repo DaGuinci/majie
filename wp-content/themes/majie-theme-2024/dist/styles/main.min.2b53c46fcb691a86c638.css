@@ -453,6 +453,51 @@
   align-items: center;
   gap: 25px;
 }
+.landing__contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.landing__contact form p {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.landing__contact form p label span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.landing__contact form p label span input {
+  box-sizing: border-box;
+  max-width: 95%;
+  border: none;
+  border-bottom: 2px solid #0a71b4;
+  transition: all 0.5s;
+}
+.landing__contact form p label span input:focus {
+  max-width: 100%;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 2px 2px 5px 0px #0a71b4;
+}
+.landing__contact form p label span textarea {
+  border: 1px solid #0a71b4;
+  transition: all 0.5s;
+  box-sizing: border-box;
+  max-width: 95%;
+}
+.landing__contact form p label span textarea:focus {
+  max-width: 100%;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 2px 2px 5px 0px #0a71b4;
+}
+.landing__contact form .wpcf7-response-output {
+  margin: 0;
+}
+
 .majieFooter {
   width: 56%;
   margin: auto;
@@ -512,13 +557,16 @@ body h3 {
   font-size: 1.4rem;
   color: #f29400;
 }
-body .btn, body .landing__activities a, .landing__activities body a, body .landing__support a, .landing__support body a {
+body .btn, body .landing__activities a, .landing__activities body a, body .landing__support a, .landing__support body a, body .landing__contact form p input[type=submit], .landing__contact form p body input[type=submit] {
   display: inline-block;
   text-decoration: none;
-  text-decoration-style: n;
   background-color: #f29400;
   color: white;
   padding: 3px 10px;
   border-radius: 14px;
   margin: 7px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.5rem;
 }

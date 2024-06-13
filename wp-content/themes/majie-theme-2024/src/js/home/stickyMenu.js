@@ -35,7 +35,6 @@ module.exports = function () {
                 ref = '#' + ref[1];
                 ref = ref.replace('_section', '');
                 target = document.querySelector(ref);
-                console.log(ref);
                 // ie 11 does not support smooth scroll, so we will simply scroll
                 if (isIE11) {
                     window.scrollTo(0, target.offsetTop);
