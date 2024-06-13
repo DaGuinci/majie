@@ -5,8 +5,9 @@ $news = get_field('news');
 $who_are_we = get_field('who_are_we');
 $activities = get_field('activities');
 $partners = get_field('partners');
+$support = get_field('support');
 // var_dump($partners['work']);
-$content = get_the_content();
+// $content = get_the_content();
 ?>
 
   <nav class="landing_menu">
@@ -125,6 +126,51 @@ $content = get_the_content();
         <?php }; ?>
       </div>
     </div>
+  </div>
+  <div class="landing__support" id="support">
+  <?php if (strlen($support['title'])>0) { ?>
+    <div class="landing__support__title">
+      <h2><?= $support['title'] ?></h2>
+    </div>
+    <?php if (sizeof($support['emergency'])>1) { ?>
+      <div class="landing__support__emergency">
+        <div class="tit">
+          <h3>
+            <?= $support['emergency']['title'] ?>
+          </h3>
+        </div>
+      <?php for ($j=1; $j < sizeof($support['emergency'])-1; $j++) { ?>
+        <p class="emergency">
+          <?= $support['emergency']['emergency_'.$j] ?>
+        </p>
+      <?php }; ?>
+      </div>
+    <?php }; ?>
+    <?php if (strlen($support['needs']['title'])>0 && strlen($support['needs']['content'])>0) { ?>
+      <div class="landing__support__needs">
+        <div class="title">
+          <h3>
+            <?= $support['needs']['title']; ?>
+          </h3>
+        </div>
+        <div class="content">
+          <?= $support['needs']['content']; ?>
+        </div>
+      </div>
+    <?php }; ?>
+    <?php if (strlen($support['donations']['title'])>0 && strlen($support['donations']['content'])>0) { ?>
+      <div class="landing__support__donations">
+        <div class="title">
+          <h3>
+            <?= $support['donations']['title']; ?>
+          </h3>
+        </div>
+        <div class="content">
+          <?= $support['donations']['content']; ?>
+        </div>
+      </div>
+    <?php }; ?>
+  <?php }; ?>
   </div>
 </section>
 <?php

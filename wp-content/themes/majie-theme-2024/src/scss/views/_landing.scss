@@ -38,7 +38,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
   padding: 40px 0;
 
   p {
@@ -71,14 +71,7 @@
   &__activities {
 
     a {
-      display: inline-block;
-      text-decoration: none;
-      text-decoration-style: n;
-      background-color: #f29400;
-      color: white;
-      padding: 3px 10px;
-      border-radius: 14px;
-      margin: 7px;
+      @extend .btn;
     }
   }
 
@@ -147,6 +140,11 @@
 
       }
 
+    }
+  }
+  &__support {
+    a {
+      @extend .btn;
     }
   }
 }

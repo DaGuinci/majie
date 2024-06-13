@@ -377,7 +377,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
   padding: 40px 0;
 }
 .landing p.is-visible {
@@ -392,16 +392,6 @@
 }
 .landing__news__content img {
   margin: 15px 0;
-}
-.landing__activities a {
-  display: inline-block;
-  text-decoration: none;
-  text-decoration-style: n;
-  background-color: #f29400;
-  color: white;
-  padding: 3px 10px;
-  border-radius: 14px;
-  margin: 7px;
 }
 .landing__partners {
   display: flex;
@@ -463,7 +453,6 @@
   align-items: center;
   gap: 25px;
 }
-
 .majieFooter {
   width: 56%;
   margin: auto;
@@ -522,4 +511,14 @@ body h3 {
   border-bottom: 1px solid #f29400;
   font-size: 1.4rem;
   color: #f29400;
+}
+body .btn, body .landing__activities a, .landing__activities body a, body .landing__support a, .landing__support body a {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-style: n;
+  background-color: #f29400;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 14px;
+  margin: 7px;
 }
