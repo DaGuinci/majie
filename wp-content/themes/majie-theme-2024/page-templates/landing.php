@@ -7,7 +7,7 @@ $activities = get_field('activities');
 $partners = get_field('partners');
 $support = get_field('support');
 // var_dump($partners['work']);
-// $content = get_the_content();
+$content = get_the_content();
 ?>
 
   <nav class="landing_menu">
@@ -171,6 +171,9 @@ $support = get_field('support');
       </div>
     <?php }; ?>
   <?php }; ?>
+  </div>
+  <div class="landing__contact" id="contact">
+    <?= do_shortcode('[contact-form-7 id="8cc6917" title="Contact form 1"]'); ?>
   </div>
 </section>
 <?php
