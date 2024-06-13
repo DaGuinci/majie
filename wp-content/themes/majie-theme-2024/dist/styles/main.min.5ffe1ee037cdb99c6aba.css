@@ -341,6 +341,37 @@
   opacity: 0.6;
 }
 
+.landing_menu {
+  top: 0;
+  z-index: 100;
+  display: flex;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  padding: 20px 0;
+  justify-content: center;
+  position: sticky;
+  background-color: #e2dac2;
+  transition: all 1s;
+}
+.landing_menu.fixed {
+  font-size: 0.7rem;
+  row-gap: 10px;
+}
+.landing_menu::after {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: #0a71b4;
+  bottom: 0;
+  position: absolute;
+}
+.landing_menu a {
+  color: #0a71b4;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
 .landing {
   width: 80%;
   margin: auto;
@@ -380,19 +411,23 @@
 .landing__partners h3 {
   margin: auto;
 }
-.landing__partners__work {
+.landing__partners__work, .landing__partners__funders {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.landing__partners__work .work_partners {
+.landing__partners__work .work_partners,
+.landing__partners__work .funders_partners, .landing__partners__funders .work_partners,
+.landing__partners__funders .funders_partners {
   display: flex;
   position: relative;
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
 }
-.landing__partners__work .work_partners .partner {
+.landing__partners__work .work_partners .partner,
+.landing__partners__work .funders_partners .partner, .landing__partners__funders .work_partners .partner,
+.landing__partners__funders .funders_partners .partner {
   max-width: 25%;
   display: flex;
   flex-direction: column;
@@ -401,12 +436,16 @@
   color: black;
   font-weight: 900;
 }
-.landing__partners__work .work_partners .partner__logo {
+.landing__partners__work .work_partners .partner__logo,
+.landing__partners__work .funders_partners .partner__logo, .landing__partners__funders .work_partners .partner__logo,
+.landing__partners__funders .funders_partners .partner__logo {
   max-width: 100%;
   flex-grow: 1;
   object-fit: contain;
 }
-.landing__partners__work .work_partners .partner__name {
+.landing__partners__work .work_partners .partner__name,
+.landing__partners__work .funders_partners .partner__name, .landing__partners__funders .work_partners .partner__name,
+.landing__partners__funders .funders_partners .partner__name {
   text-align: center;
 }
 .landing__partners__links {

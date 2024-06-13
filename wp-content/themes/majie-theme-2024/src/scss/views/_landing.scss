@@ -1,3 +1,38 @@
+.landing_menu {
+  top: 0;
+  z-index: 100;
+  display: flex;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  padding: 20px 0;
+  justify-content: center;
+  position: sticky;
+  background-color: #e2dac2;
+  transition: all 1s;
+
+  &.fixed {
+    font-size: .7rem;
+    row-gap: 10px;
+  }
+
+  &::after {
+    content: "";
+    width: 80%;
+    height: 2px;
+    background-color: $color-primary;
+    bottom: 0;
+    position: absolute;
+  }
+
+  a {
+    color: $color-primary;
+    text-decoration: none;
+    font-family: $main-font;
+    // flex-basis: 33%;
+  }
+}
+
 .landing {
   width: 80%;
   margin: auto;
@@ -56,12 +91,16 @@
       margin: auto;
     }
 
-    &__work {
+    &__work,
+    &__funders
+    {
       display: flex;
       flex-direction: column;
       gap: 30px;
 
-      .work_partners {
+      .work_partners,
+      .funders_partners
+      {
         display: flex;
         position: relative;
         flex-wrap: wrap;

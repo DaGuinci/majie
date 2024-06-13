@@ -15,7 +15,7 @@
   \***********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var homeSlider = __webpack_require__(/*! ./home/homeSlider.js */ \"./src/js/home/homeSlider.js\");\nvar revealText = __webpack_require__(/*! ./home/revealText.js */ \"./src/js/home/revealText.js\");\nvar menuResponsive = __webpack_require__(/*! ./global/menuResponsive.js */ \"./src/js/global/menuResponsive.js\");\nhomeSlider();\nmenuResponsive();\n// revealText()\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/app.js?");
+eval("var homeSlider = __webpack_require__(/*! ./home/homeSlider.js */ \"./src/js/home/homeSlider.js\");\nvar revealText = __webpack_require__(/*! ./home/revealText.js */ \"./src/js/home/revealText.js\");\nvar stickyMenu = __webpack_require__(/*! ./home/stickyMenu.js */ \"./src/js/home/stickyMenu.js\");\nvar menuResponsive = __webpack_require__(/*! ./global/menuResponsive.js */ \"./src/js/global/menuResponsive.js\");\nhomeSlider();\nmenuResponsive();\n// revealText()\nstickyMenu();\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/app.js?");
 
 /***/ }),
 
@@ -46,6 +46,16 @@ eval("module.exports = function () {\n  const pictures = document.querySelectorA
 /***/ ((module) => {
 
 eval("module.exports = function () {\n  // texts = document.querySelectorAll('p');\n\n  function reveal() {\n    var texts = document.querySelectorAll(\".landing p\");\n    console.log(texts);\n    for (var i = 0; i < texts.length; i++) {\n      var windowHeight = window.innerHeight;\n      var elementTop = texts[i].getBoundingClientRect().top;\n      var elementVisible = 50;\n      if (elementTop < windowHeight - elementVisible) {\n        texts[i].classList.add(\"is-visible\");\n      } else {\n        texts[i].classList.remove(\"is-visible\");\n      }\n    }\n  }\n  window.addEventListener(\"scroll\", reveal);\n\n  // To check the scroll position on page load\n  reveal();\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/home/revealText.js?");
+
+/***/ }),
+
+/***/ "./src/js/home/stickyMenu.js":
+/*!***********************************!*\
+  !*** ./src/js/home/stickyMenu.js ***!
+  \***********************************/
+/***/ ((module) => {
+
+eval("module.exports = function () {\n  const nav = document.querySelector('.landing_menu');\n  let navTop = nav.offsetTop;\n  function fixedNav() {\n    if (window.scrollY >= navTop) {\n      nav.classList.add('fixed');\n    } else {\n      nav.classList.remove('fixed');\n    }\n  }\n  window.addEventListener('scroll', fixedNav);\n  document.addEventListener(\"DOMContentLoaded\", () => {\n    //  little hack to detect if the user is on ie 11\n    const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;\n    // get all the links\n    const links = nav.querySelectorAll('a');\n    // const listOfLinks = document.querySelectorAll(\"a[href^='#sectionLink\");\n    // loop over all the links\n    links.forEach(function (link) {\n      // listen for a click\n      link.addEventListener('click', function (e) {\n        e.preventDefault();\n        // toggle highlight on and off when we click a link\n        links.forEach(link => {\n          if (link.classList.contains('highlighted')) {\n            link.classList.remove('highlighted');\n          }\n        });\n        link.classList.add('highlighted');\n        // get the element where to scroll\n        let ref = link.href.split('#');\n        ref = '#' + ref[1];\n        ref = ref.replace('_section', '');\n        target = document.querySelector(ref);\n        console.log(ref);\n        // ie 11 does not support smooth scroll, so we will simply scroll\n        if (isIE11) {\n          window.scrollTo(0, target.offsetTop);\n        } else {\n          window.scroll({\n            behavior: 'smooth',\n            left: 0,\n            // top gets the distance from the top of the page of our target element\n            // top: 1400\n            top: target.offsetTop - 82\n          });\n        }\n      });\n    });\n  });\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/home/stickyMenu.js?");
 
 /***/ }),
 
