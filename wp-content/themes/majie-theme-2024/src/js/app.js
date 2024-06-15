@@ -5,5 +5,5 @@ var menuResponsive = require('./global/menuResponsive.js')
 
 homeSlider()
 menuResponsive()
-// revealText()
+revealText()
 stickyMenu()

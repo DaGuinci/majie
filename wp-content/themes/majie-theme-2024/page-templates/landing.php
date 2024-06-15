@@ -29,9 +29,9 @@ $content = get_the_content();
   <?php if ($news['active'] && strlen($news['content']) > 0) { ?>
     <div class="landing__news" id="news">
       <div class="landing__news__title">
-        <h2><?= $news['title']; ?></h2>
+        <h2 class="reveal"><?= $news['title']; ?></h2>
       </div>
-      <div class="landing__news__content">
+      <div class="landing__news__content reveal">
         <?= $news['content']; ?>
       </div>
     </div>
@@ -39,9 +39,9 @@ $content = get_the_content();
   <?php if (strlen($who_are_we['content']) > 0) { ?>
     <div class="landing__who_are_we" id="who_are_we">
       <div class="landing__who_are_we__title">
-        <h2><?= $who_are_we['title'] ?></h2>
+        <h2 class="reveal"><?= $who_are_we['title'] ?></h2>
       </div>
-      <div class="landing__who_are_we__content">
+      <div class="landing__who_are_we__content reveal">
         <?= $who_are_we['content'] ?>
       </div>
     </div>
@@ -49,18 +49,18 @@ $content = get_the_content();
   <?php if (strlen($activities['content']) > 0) { ?>
     <div class="landing__activities" id="activities">
       <div class="landing__activities__title">
-        <h2><?= $activities['title'] ?></h2>
+        <h2 class="reveal"><?= $activities['title'] ?></h2>
       </div>
-      <div class="landing__activities__content">
+      <div class="landing__activities__content reveal">
         <?= $activities['content'] ?>
       </div>
     </div>
   <?php }; ?>
   <div class="landing__partners" id="partners">
     <div class="landing__partners__title">
-    <h2><?= $partners['title'] ?></h2>
+    <h2 class="reveal"><?= $partners['title'] ?></h2>
     </div>
-    <div class="landing__partners__work">
+    <div class="landing__partners__work reveal">
       <h3><?= $partners['work']['title']; ?></h3>
       <div class="work_partners">
         <?php for ($i=1; $i < sizeof($partners['work'])-1; $i++) {
@@ -85,7 +85,7 @@ $content = get_the_content();
         <?php }; ?>
       </div>
     </div>
-    <div class="landing__partners__links">
+    <div class="landing__partners__links reveal">
       <h3><?= $partners['links']['title']; ?></h3>
       <div class="links">
         <?php for ($i=1; $i < sizeof($partners['links'])-1; $i++) {
@@ -103,7 +103,7 @@ $content = get_the_content();
         <?php }; ?>
       </div>
     </div>
-    <div class="landing__partners__funders">
+    <div class="landing__partners__funders reveal">
       <h3><?= $partners['funders']['title']; ?></h3>
       <div class="funders_partners">
         <?php for ($i=1; $i < sizeof($partners['funders'])-1; $i++) {
@@ -132,10 +132,10 @@ $content = get_the_content();
   <div class="landing__support" id="support">
   <?php if (strlen($support['title'])>0) { ?>
     <div class="landing__support__title">
-      <h2><?= $support['title'] ?></h2>
+      <h2 class="reveal"><?= $support['title'] ?></h2>
     </div>
     <?php if (sizeof($support['emergency'])>1) { ?>
-      <div class="landing__support__emergency">
+      <div class="landing__support__emergency reveal">
         <div class="tit">
           <h3>
             <?= $support['emergency']['title'] ?>
@@ -149,7 +149,7 @@ $content = get_the_content();
       </div>
     <?php }; ?>
     <?php if (strlen($support['needs']['title'])>0 && strlen($support['needs']['content'])>0) { ?>
-      <div class="landing__support__needs">
+      <div class="landing__support__needs reveal">
         <div class="title">
           <h3>
             <?= $support['needs']['title']; ?>
@@ -161,7 +161,7 @@ $content = get_the_content();
       </div>
     <?php }; ?>
     <?php if (strlen($support['donations']['title'])>0 && strlen($support['donations']['content'])>0) { ?>
-      <div class="landing__support__donations">
+      <div class="landing__support__donations reveal">
         <div class="title">
           <h3>
             <?= $support['donations']['title']; ?>
@@ -176,11 +176,9 @@ $content = get_the_content();
   </div>
   <div class="landing__contact" id="contact">
     <div class="title">
-      <h2>
-        Nous contacter
-      </h2>
+      <h2 class="reveal">Nous contacter</h2>
     </div>
-    <div class="infos">
+    <div class="infos reveal">
       <?php foreach ($contact['informations'] as $key => $info) {
         if (strlen($info) > 0) {
           $svg_url = get_template_directory_uri().'/dist/images/'.$key.'.svg';?>
@@ -192,8 +190,7 @@ $content = get_the_content();
       }; ?>
 
     </div>
-    <div class="form">
-
+    <div class="form reveal">
       <?= do_shortcode('[contact-form-7 id="' .$contact['form'][0]. '" title="Contact form fr"]'); ?>
     </div>
   </div>

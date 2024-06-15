@@ -376,7 +376,26 @@
   gap: 40px;
   padding: 40px 0;
 }
-.landing p.is-visible {
+.landing .reveal {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+  will-change: opacity, visibility;
+}
+.landing .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+.landing h2.reveal {
+  opacity: 0;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+  will-change: opacity, visibility;
+}
+.landing h2.reveal.is-visible {
   opacity: 1;
   transform: none;
   visibility: visible;

@@ -2,7 +2,7 @@ module.exports = function () {
     // texts = document.querySelectorAll('p');
 
     function reveal() {
-        var texts = document.querySelectorAll(".landing p");
+        var texts = document.querySelectorAll(".landing .reveal");
         console.log(texts);
         for (var i = 0; i < texts.length; i++) {
           var windowHeight = window.innerHeight;
