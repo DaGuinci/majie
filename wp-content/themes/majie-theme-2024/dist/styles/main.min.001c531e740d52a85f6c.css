@@ -494,6 +494,9 @@
 .landing__contact .infos .contact_item .content {
   margin: 0;
 }
+.landing__contact .infos .contact_item .email {
+  color: #f29400;
+}
 .landing__contact form {
   display: flex;
   flex-direction: column;

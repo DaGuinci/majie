@@ -184,7 +184,11 @@ $content = get_the_content();
           $svg_url = get_template_directory_uri().'/dist/images/'.$key.'.svg';?>
           <div class="contact_item">
             <img src="<?= $svg_url; ?>" alt="" class="icon">
-            <span class="content"><?= $info; ?></span>
+            <?php if ($key == 'email') {?>
+              <a href="mailto:<?= $info; ?>" class="content email"><?= $info; ?></a>
+            <?php } else {?>
+              <span class="content"><?= $info; ?></span>
+            <?php }; ?>
           </div>
         <?php };
       }; ?>
