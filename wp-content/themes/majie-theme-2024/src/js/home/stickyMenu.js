@@ -1,16 +1,5 @@
 module.exports = function () {
     const nav = document.querySelector('.landing_menu');
-    let navTop = nav.offsetTop;
-
-    function fixedNav() {
-        if (window.scrollY >= navTop) {
-            nav.classList.add('fixed');
-        } else {
-            nav.classList.remove('fixed');
-        }
-    }
-
-    window.addEventListener('scroll', fixedNav);
 
     document.addEventListener("DOMContentLoaded", () => {
         //  little hack to detect if the user is on ie 11

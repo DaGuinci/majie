@@ -6,7 +6,8 @@ $who_are_we = get_field('who_are_we');
 $activities = get_field('activities');
 $partners = get_field('partners');
 $support = get_field('support');
-// var_dump($partners['work']);
+$contact = get_field('contact');
+// var_dump($contact['form']);
 $content = get_the_content();
 ?>
 
@@ -179,7 +180,22 @@ $content = get_the_content();
         Nous contacter
       </h2>
     </div>
-    <?= do_shortcode('[contact-form-7 id="1cf32d4" title="Contact form fr"]'); ?>
+    <div class="infos">
+      <?php foreach ($contact['informations'] as $key => $info) {
+        if (strlen($info) > 0) {
+          $svg_url = get_template_directory_uri().'/dist/images/'.$key.'.svg';?>
+          <div class="contact_item">
+            <img src="<?= $svg_url; ?>" alt="" class="icon">
+            <span class="content"><?= $info; ?></span>
+          </div>
+        <?php };
+      }; ?>
+
+    </div>
+    <div class="form">
+
+      <?= do_shortcode('[contact-form-7 id="' .$contact['form'][0]. '" title="Contact form fr"]'); ?>
+    </div>
   </div>
 </section>
 <?php

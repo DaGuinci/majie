@@ -2,19 +2,19 @@
   top: 0;
   z-index: 100;
   display: flex;
-  row-gap: 20px;
+  row-gap: 10px;
   flex-wrap: wrap;
   column-gap: 30px;
-  padding: 20px 0;
+  padding: 15px 0;
   justify-content: center;
   position: sticky;
   background-color: #e2dac2;
   transition: all 1s;
 
-  &.fixed {
-    font-size: .7rem;
-    row-gap: 10px;
-  }
+  // &.fixed {
+  //   font-size: .7rem;
+  //   row-gap: 10px;
+  // }
 
   &::after {
     content: "";
@@ -149,6 +149,36 @@
   }
 
   &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .infos {
+      max-width: 80%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .contact_item {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .icon {
+          width: 25px;
+          height: 25px;
+          margin-top: 7px;
+          background-repeat: no-repeat;
+          // filter generated with https://isotropic.co/tool/hex-color-to-css-filter/
+          filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6)) invert(54%) sepia(92%) saturate(1672%) hue-rotate(6deg) brightness(101%) contrast(102%);
+        }
+
+        .content {
+          margin: 0;
+        }
+      }
+
+    }
     form {
       display: flex;
       flex-direction: column;
