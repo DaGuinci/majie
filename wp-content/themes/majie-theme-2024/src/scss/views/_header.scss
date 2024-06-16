@@ -11,333 +11,134 @@
     .logo_container {
       position: relative;
       z-index: 1000;
-      height: 60%;
+      height: 45vw;
       width: 64%;
 
       @media (min-width: $medium) {
         width: 42%;
       }
 
+
       .logo_part {
         height: 100%;
         background-repeat: no-repeat;
         background-size: contain;
-      }
-
-      .majie {
-        background-image: url('../../dist/images/majie.png');
-
         animation-duration: 1s;
-        animation-name: fadein;
 
-        @keyframes fadein {
-          from {
-            opacity: 0;
-          }
+        &.majie {
+          background-image: url('../../dist/images/majie.png');
 
-          50% {
-            opacity: 0;
-          }
+          animation: fadein 1s ease-out;
 
-          to {
-            opacity: 1;
-          }
-        }
-      }
-
-      .montpellier {
-        background-image: url('../../dist/images/montpellier.png');
-        background-size: 55%;
-        background-position-y: 29.3vw;
-        transform: translate(-0.7vw, -100%);
-
-        animation-duration: 2s;
-        animation-name: mtpSlidein;
-
-        @keyframes mtpSlidein {
-          from {
-            transform: translate(-100vw, -130%);
-            // width: 300%;
-            opacity: 0;
-          }
-
-          20% {
-            transform: translate(-100vw, -130%);
-            // width: 300%;
-            opacity: 0;
-          }
-
-          50% {
-            transform: translate(-0.7vw, -100%);
-            // width: 100%;
-          }
-
-          to {
-            transform: translate(-0.7vw, -100%);
-            // width: 100%;
-          }
-        }
-
-        @media (min-width: $medium) {
-          background-size: 23vw 2.5vw;
-          background-position-y: 19.2vw;
-        }
-      }
-
-      .accueil {
-        background-image: url('../../dist/images/accueil.png');
-        background-size: 91.4%;
-        background-position-y: 29.1vw;
-        transform: translate(45.3vw, -200%);
-        width: 23vw;
-
-        animation-duration: 2s;
-        animation-name: accSlidein;
-
-        @keyframes accSlidein {
-          from {
-            transform: translate(145.3vw, -230%);
-            width: 69vw;
-            opacity: 0;
-          }
-
-          30% {
-            transform: translate(145.3vw, -230%);
-            width: 69vw;
-            opacity: 0;
-          }
-
-          60% {
-            transform: translate(45.3vw, -200%);
-            width: 23vw;
-          }
-
-          to {
-            transform: translate(45.3vw, -200%);
-            width: 23vw;
-          }
-        }
-
-        @media (min-width: $medium) {
-          background-size: 13vw 2.5vw;
-          background-position-y: 19.2vw;
-          transform: translate(30vw, -200%);
-
-          @keyframes accSlidein {
+          @keyframes fadein {
             from {
-              transform: translate(90vw, -230%);
-              width: 69vw;
               opacity: 0;
-            }
-
-            30% {
-              transform: translate(90vw, -230%);
-              width: 69vw;
-              opacity: 0;
-            }
-
-            60% {
-              transform: translate(30vw, -200%);
-              width: 23vw;
             }
 
             to {
-              transform: translate(30vw, -200%);
-              width: 23vw;
+              opacity: 1;
             }
           }
         }
-      }
 
-      .jeunes {
-        background-image: url('../../dist/images/jeunes.png');
-        background-size: 27.7%;
-        background-position-y: 37vw;
-        transform: translate(-1.7vw, -300%);
+        &.text {
+          height: 8vw;
+          width: 36vw;
+          position: relative;
+          // animation-name: fadein;
 
-        animation-duration: 2s;
-        animation-name: jeuSlidein;
+          &.montpellier {
+            background-image: url('../../dist/images/montpellier2.png');
+            top: -15.8vw;
+            left: -1vw;
+            animation: mtpIn 1s ease-out;
 
-        @keyframes jeuSlidein {
-          from {
-            transform: translate(-100vw, -250%);
-            width: 300%;
-            opacity: 0;
-          }
+            @keyframes mtpIn {
+              from {
+                transform: scaleX(10) scaleY(10) translate(-100vw, -50vw);
+                opacity: 0;
+              }
 
-          40% {
-            transform: translate(-100vw, -250%);
-            width: 300%;
-            opacity: 0;
-          }
-
-          70% {
-            transform: translate(-1.7vw, -300%);
-            width: 100%;
-          }
-
-          to {
-            transform: translate(-1.7vw, -300%);
-            width: 100%;
-          }
-        }
-
-        @media (min-width: $medium) {
-          background-size: 11vw 2.5vw;
-          background-position-y: 23.6vw;
-          transform: translate(-0.7vw, -300%);
-
-          @keyframes jeuSlidein {
-            from {
-              transform: translate(-100vw, -250%);
-              width: 300%;
-              opacity: 0;
-            }
-
-            40% {
-              transform: translate(-100vw, -250%);
-              width: 300%;
-              opacity: 0;
-            }
-
-            70% {
-              transform: translate(-0.7vw, -300%);
-              width: 100%;
-            }
-
-            to {
-              transform: translate(-0.7vw, -300%);
-              width: 100%;
+              to {
+                transform: none;
+                opacity: 1;
+              }
             }
           }
-        }
-      }
 
-      .isoles {
-        background-image: url('../../dist/images/isoles.png');
-        background-size: 56.5%;
-        background-position-y: 36.9vw;
-        transform: translate(18.8vw, -400%);
-        width: 30vw;
+          &.accueil {
+            background-image: url('../../dist/images/accueil2.png');
+            top: -23.93vw;
+            right: -36.23vw;
+            animation: accIn 1.2s ease-out;
 
-        animation-duration: 2s;
-        animation-name: isoSlidein;
+            @keyframes accIn {
+              from {
+                transform: scaleX(10) scaleY(10) translate(100vw, -50vw);
+                opacity: 0;
+              }
 
-        @keyframes isoSlidein {
-          from {
-            transform: translate(18.8vw, -350%);
-            width: 90vw;
-            opacity: 0;
-          }
-
-          50% {
-            transform: translate(18.8vw, -350%);
-            width: 90vw;
-            opacity: 0;
-          }
-
-          80% {
-            transform: translate(18.8vw, -400%);
-            width: 30vw;
-          }
-
-          to {
-            transform: translate(18.8vw, -400%);
-            width: 30vw;
-          }
-        }
-
-        @media (min-width: $medium) {
-          background-size: 11vw 2.5vw;
-          background-position-y: 23.6vw;
-          transform: translate(12.3vw, -400%);
-
-          @keyframes isoSlidein {
-            from {
-              transform: translate(18.8vw, -350%);
-              width: 90vw;
-              opacity: 0;
-            }
-
-            50% {
-              transform: translate(18.8vw, -350%);
-              width: 90vw;
-              opacity: 0;
-            }
-
-            80% {
-              transform: translate(12.3vw, -400%);
-              width: 30vw;
-            }
-
-            to {
-              transform: translate(12.3vw, -400%);
-              width: 30vw;
+              to {
+                transform: none;
+                opacity: 1;
+              }
             }
           }
-        }
-      }
 
-      .etrangers {
-        background-image: url('../../dist/images/etrangers.png');
-        background-size: 96.82%;
-        background-position-y: 36.98vw;
-        transform: translate(37.9vw, -500%);
-        width: 30vw;
+          &.jeunes {
+            background-image: url('../../dist/images/jeunes2.png');
+            top: -24vw;
+            left: -1.7vw;
+            animation: jnIn 1.4s,;
 
-        animation-duration: 2s;
-        animation-name: etrSlidein;
+            @keyframes jnIn {
+              from {
+                transform: scaleX(10) scaleY(10) translate(-100vw, 50vw);
+                opacity: 0;
+              }
 
-        @keyframes etrSlidein {
-          from {
-            transform: translate(137.9vw, -450%);
-            width: 60vw;
-            opacity: 0;
-          }
-
-          60% {
-            transform: translate(137.9vw, -450%);
-            width: 60vw;
-            opacity: 0;
-          }
-
-          90% {
-            transform: translate(37.9vw, -500%);
-            width: 30vw;
-          }
-
-          to {
-            transform: translate(37.9vw, -500%);
-            width: 30vw;
-          }
-        }
-
-        @media (min-width: $medium) {
-          background-size: 60.5%;
-          background-position-y: 23.57vw;
-          transform: translate(25vw, -500%);
-
-          @keyframes etrSlidein {
-            from {
-              transform: translate(125vw, -450%);
-              width: 60vw;
-              opacity: 0;
+              to {
+                transform: none;
+                opacity: 1;
+              }
             }
+          }
 
-            60% {
-              transform: translate(125vw, -450%);
-              width: 60vw;
-              opacity: 0;
+          &.isoles {
+            background-image: url('../../dist/images/isoles2.png');
+            top: -31.9vw;
+            left: 18.6vw;
+            animation: isolIn 1.6s,;
+
+            @keyframes isolIn {
+              from {
+                transform: scaleX(10) scaleY(10) translate(-25vw, 100vw);
+                opacity: 0;
+              }
+
+              to {
+                transform: none;
+                opacity: 1;
+              }
             }
+          }
 
-            90% {
-              transform: translate(25vw, -500%);
-              width: 30vw;
-            }
+          &.etrangers {
+            background-image: url('../../dist/images/etrangers2.png');
+            top: -39.9vw;
+            left: 30.43vw;
+            animation: etrIn 1.8s,;
 
-            to {
-              transform: translate(25vw, -500%);
-              width: 30vw;
+            @keyframes etrIn {
+              from {
+                transform: scaleX(10) scaleY(10) translate(100vw, 50vw);
+                opacity: 0;
+              }
+
+              to {
+                transform: none;
+                opacity: 1;
+              }
             }
           }
         }

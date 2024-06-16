@@ -15,17 +15,7 @@
   \***********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var homeSlider = __webpack_require__(/*! ./home/homeSlider.js */ \"./src/js/home/homeSlider.js\");\nvar revealText = __webpack_require__(/*! ./home/revealText.js */ \"./src/js/home/revealText.js\");\nvar stickyMenu = __webpack_require__(/*! ./home/stickyMenu.js */ \"./src/js/home/stickyMenu.js\");\nvar menuResponsive = __webpack_require__(/*! ./global/menuResponsive.js */ \"./src/js/global/menuResponsive.js\");\nhomeSlider();\nmenuResponsive();\nrevealText();\nstickyMenu();\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/app.js?");
-
-/***/ }),
-
-/***/ "./src/js/global/menuResponsive.js":
-/*!*****************************************!*\
-  !*** ./src/js/global/menuResponsive.js ***!
-  \*****************************************/
-/***/ ((module) => {
-
-eval("module.exports = function () {\n  const burger = document.querySelector('.burger');\n  const menu = document.querySelector('.small__menu__content');\n  const back = document.querySelector('.back');\n  burger.addEventListener('click', function () {\n    menu.classList.remove('is-hidden');\n    burger.classList.add('is-hidden');\n  });\n  back.addEventListener('click', function () {\n    menu.classList.add('is-hidden');\n    burger.classList.remove('is-hidden');\n  });\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/global/menuResponsive.js?");
+eval("var homeSlider = __webpack_require__(/*! ./home/homeSlider.js */ \"./src/js/home/homeSlider.js\");\n// var headerEntrance = require('./home/headerEntrance.js')\nvar revealText = __webpack_require__(/*! ./home/revealText.js */ \"./src/js/home/revealText.js\");\nvar stickyMenu = __webpack_require__(/*! ./home/stickyMenu.js */ \"./src/js/home/stickyMenu.js\");\n// var menuResponsive = require('./global/menuResponsive.js')\n\nhomeSlider();\n// menuResponsive()\nrevealText();\nstickyMenu();\n// headerEntrance()\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/app.js?");
 
 /***/ }),
 
@@ -45,7 +35,7 @@ eval("module.exports = function () {\n  const pictures = document.querySelectorA
   \***********************************/
 /***/ ((module) => {
 
-eval("module.exports = function () {\n  // texts = document.querySelectorAll('p');\n\n  function reveal() {\n    var texts = document.querySelectorAll(\".landing .reveal\");\n    console.log(texts);\n    for (var i = 0; i < texts.length; i++) {\n      var windowHeight = window.innerHeight;\n      var elementTop = texts[i].getBoundingClientRect().top;\n      var elementVisible = 50;\n      if (elementTop < windowHeight - elementVisible) {\n        texts[i].classList.add(\"is-visible\");\n      } else {\n        texts[i].classList.remove(\"is-visible\");\n      }\n    }\n  }\n  window.addEventListener(\"scroll\", reveal);\n\n  // To check the scroll position on page load\n  reveal();\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/home/revealText.js?");
+eval("module.exports = function () {\n  // texts = document.querySelectorAll('p');\n\n  function reveal() {\n    var texts = document.querySelectorAll(\".landing .reveal\");\n    for (var i = 0; i < texts.length; i++) {\n      var windowHeight = window.innerHeight;\n      var elementTop = texts[i].getBoundingClientRect().top;\n      var elementVisible = 50;\n      if (elementTop < windowHeight - elementVisible) {\n        texts[i].classList.add(\"is-visible\");\n      } else {\n        texts[i].classList.remove(\"is-visible\");\n      }\n    }\n  }\n  window.addEventListener(\"scroll\", reveal);\n\n  // To check the scroll position on page load\n  reveal();\n};\n\n//# sourceURL=webpack://majie-theme-2024/./src/js/home/revealText.js?");
 
 /***/ }),
 

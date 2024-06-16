@@ -7,6 +7,49 @@
   src: url(../scripts/../fonts/brandon_reg-webfont.woff2) format("woff2"), url(../scripts/../fonts/brandon_reg-webfont.woff) format("woff");
   font-display: swap;
 }
+body {
+  margin: 0;
+}
+body span,
+body p,
+body h1,
+body h2,
+body h3 {
+  font-family: "Montserrat", sans-serif;
+}
+body p {
+  text-align: justify;
+  margin: 5px 0;
+}
+body h2 {
+  background-color: #0a71b4;
+  color: white;
+  display: inline-block;
+  padding: 4px 15px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  border-radius: 5px;
+}
+body h3 {
+  display: inline-block;
+  border-bottom: 1px solid #f29400;
+  font-size: 1.4rem;
+  color: #f29400;
+}
+body .btn, body .landing__contact form p input[type=submit], .landing__contact form p body input[type=submit], body .landing__support a, .landing__support body a, body .landing__activities a, .landing__activities body a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #f29400;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 14px;
+  margin: 7px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
 .header {
   height: 100vh;
   background-color: black;
@@ -20,7 +63,7 @@
 .header__logo .logo_container {
   position: relative;
   z-index: 1000;
-  height: 60%;
+  height: 45vw;
   width: 64%;
 }
 @media (min-width: 768px) {
@@ -32,274 +75,103 @@
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
-}
-.header__logo .logo_container .majie {
-  background-image: url(../scripts/../images/majie.png);
   animation-duration: 1s;
-  animation-name: fadein;
+}
+.header__logo .logo_container .logo_part.majie {
+  background-image: url(../scripts/../images/majie.png);
+  animation: fadein 1s ease-out;
 }
 @keyframes fadein {
   from {
-    opacity: 0;
-  }
-  50% {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
 }
-.header__logo .logo_container .montpellier {
-  background-image: url(../scripts/../images/montpellier.png);
-  background-size: 55%;
-  background-position-y: 29.3vw;
-  transform: translate(-0.7vw, -100%);
-  animation-duration: 2s;
-  animation-name: mtpSlidein;
+.header__logo .logo_container .logo_part.text {
+  height: 8vw;
+  width: 36vw;
+  position: relative;
 }
-@keyframes mtpSlidein {
+.header__logo .logo_container .logo_part.text.montpellier {
+  background-image: url(../scripts/../images/montpellier2.png);
+  top: -15.8vw;
+  left: -1vw;
+  animation: mtpIn 1s ease-out;
+}
+@keyframes mtpIn {
   from {
-    transform: translate(-100vw, -130%);
+    transform: scaleX(10) scaleY(10) translate(-100vw, -50vw);
     opacity: 0;
-  }
-  20% {
-    transform: translate(-100vw, -130%);
-    opacity: 0;
-  }
-  50% {
-    transform: translate(-0.7vw, -100%);
   }
   to {
-    transform: translate(-0.7vw, -100%);
+    transform: none;
+    opacity: 1;
   }
 }
-@media (min-width: 768px) {
-  .header__logo .logo_container .montpellier {
-    background-size: 23vw 2.5vw;
-    background-position-y: 19.2vw;
-  }
+.header__logo .logo_container .logo_part.text.accueil {
+  background-image: url(../scripts/../images/accueil2.png);
+  top: -23.93vw;
+  right: -36.23vw;
+  animation: accIn 1.2s ease-out;
 }
-.header__logo .logo_container .accueil {
-  background-image: url(../scripts/../images/accueil.png);
-  background-size: 91.4%;
-  background-position-y: 29.1vw;
-  transform: translate(45.3vw, -200%);
-  width: 23vw;
-  animation-duration: 2s;
-  animation-name: accSlidein;
-}
-@keyframes accSlidein {
+@keyframes accIn {
   from {
-    transform: translate(145.3vw, -230%);
-    width: 69vw;
+    transform: scaleX(10) scaleY(10) translate(100vw, -50vw);
     opacity: 0;
-  }
-  30% {
-    transform: translate(145.3vw, -230%);
-    width: 69vw;
-    opacity: 0;
-  }
-  60% {
-    transform: translate(45.3vw, -200%);
-    width: 23vw;
   }
   to {
-    transform: translate(45.3vw, -200%);
-    width: 23vw;
+    transform: none;
+    opacity: 1;
   }
 }
-@media (min-width: 768px) {
-  .header__logo .logo_container .accueil {
-    background-size: 13vw 2.5vw;
-    background-position-y: 19.2vw;
-    transform: translate(30vw, -200%);
-  }
-  @keyframes accSlidein {
-    from {
-      transform: translate(90vw, -230%);
-      width: 69vw;
-      opacity: 0;
-    }
-    30% {
-      transform: translate(90vw, -230%);
-      width: 69vw;
-      opacity: 0;
-    }
-    60% {
-      transform: translate(30vw, -200%);
-      width: 23vw;
-    }
-    to {
-      transform: translate(30vw, -200%);
-      width: 23vw;
-    }
-  }
+.header__logo .logo_container .logo_part.text.jeunes {
+  background-image: url(../scripts/../images/jeunes2.png);
+  top: -24vw;
+  left: -1.7vw;
+  animation: jnIn 1.4s;
 }
-.header__logo .logo_container .jeunes {
-  background-image: url(../scripts/../images/jeunes.png);
-  background-size: 27.7%;
-  background-position-y: 37vw;
-  transform: translate(-1.7vw, -300%);
-  animation-duration: 2s;
-  animation-name: jeuSlidein;
-}
-@keyframes jeuSlidein {
+@keyframes jnIn {
   from {
-    transform: translate(-100vw, -250%);
-    width: 300%;
+    transform: scaleX(10) scaleY(10) translate(-100vw, 50vw);
     opacity: 0;
-  }
-  40% {
-    transform: translate(-100vw, -250%);
-    width: 300%;
-    opacity: 0;
-  }
-  70% {
-    transform: translate(-1.7vw, -300%);
-    width: 100%;
   }
   to {
-    transform: translate(-1.7vw, -300%);
-    width: 100%;
+    transform: none;
+    opacity: 1;
   }
 }
-@media (min-width: 768px) {
-  .header__logo .logo_container .jeunes {
-    background-size: 11vw 2.5vw;
-    background-position-y: 23.6vw;
-    transform: translate(-0.7vw, -300%);
-  }
-  @keyframes jeuSlidein {
-    from {
-      transform: translate(-100vw, -250%);
-      width: 300%;
-      opacity: 0;
-    }
-    40% {
-      transform: translate(-100vw, -250%);
-      width: 300%;
-      opacity: 0;
-    }
-    70% {
-      transform: translate(-0.7vw, -300%);
-      width: 100%;
-    }
-    to {
-      transform: translate(-0.7vw, -300%);
-      width: 100%;
-    }
-  }
+.header__logo .logo_container .logo_part.text.isoles {
+  background-image: url(../scripts/../images/isoles2.png);
+  top: -31.9vw;
+  left: 18.6vw;
+  animation: isolIn 1.6s;
 }
-.header__logo .logo_container .isoles {
-  background-image: url(../scripts/../images/isoles.png);
-  background-size: 56.5%;
-  background-position-y: 36.9vw;
-  transform: translate(18.8vw, -400%);
-  width: 30vw;
-  animation-duration: 2s;
-  animation-name: isoSlidein;
-}
-@keyframes isoSlidein {
+@keyframes isolIn {
   from {
-    transform: translate(18.8vw, -350%);
-    width: 90vw;
+    transform: scaleX(10) scaleY(10) translate(-25vw, 100vw);
     opacity: 0;
-  }
-  50% {
-    transform: translate(18.8vw, -350%);
-    width: 90vw;
-    opacity: 0;
-  }
-  80% {
-    transform: translate(18.8vw, -400%);
-    width: 30vw;
   }
   to {
-    transform: translate(18.8vw, -400%);
-    width: 30vw;
+    transform: none;
+    opacity: 1;
   }
 }
-@media (min-width: 768px) {
-  .header__logo .logo_container .isoles {
-    background-size: 11vw 2.5vw;
-    background-position-y: 23.6vw;
-    transform: translate(12.3vw, -400%);
-  }
-  @keyframes isoSlidein {
-    from {
-      transform: translate(18.8vw, -350%);
-      width: 90vw;
-      opacity: 0;
-    }
-    50% {
-      transform: translate(18.8vw, -350%);
-      width: 90vw;
-      opacity: 0;
-    }
-    80% {
-      transform: translate(12.3vw, -400%);
-      width: 30vw;
-    }
-    to {
-      transform: translate(12.3vw, -400%);
-      width: 30vw;
-    }
-  }
+.header__logo .logo_container .logo_part.text.etrangers {
+  background-image: url(../scripts/../images/etrangers2.png);
+  top: -39.9vw;
+  left: 30.43vw;
+  animation: etrIn 1.8s;
 }
-.header__logo .logo_container .etrangers {
-  background-image: url(../scripts/../images/etrangers.png);
-  background-size: 96.82%;
-  background-position-y: 36.98vw;
-  transform: translate(37.9vw, -500%);
-  width: 30vw;
-  animation-duration: 2s;
-  animation-name: etrSlidein;
-}
-@keyframes etrSlidein {
+@keyframes etrIn {
   from {
-    transform: translate(137.9vw, -450%);
-    width: 60vw;
+    transform: scaleX(10) scaleY(10) translate(100vw, 50vw);
     opacity: 0;
-  }
-  60% {
-    transform: translate(137.9vw, -450%);
-    width: 60vw;
-    opacity: 0;
-  }
-  90% {
-    transform: translate(37.9vw, -500%);
-    width: 30vw;
   }
   to {
-    transform: translate(37.9vw, -500%);
-    width: 30vw;
-  }
-}
-@media (min-width: 768px) {
-  .header__logo .logo_container .etrangers {
-    background-size: 60.5%;
-    background-position-y: 23.57vw;
-    transform: translate(25vw, -500%);
-  }
-  @keyframes etrSlidein {
-    from {
-      transform: translate(125vw, -450%);
-      width: 60vw;
-      opacity: 0;
-    }
-    60% {
-      transform: translate(125vw, -450%);
-      width: 60vw;
-      opacity: 0;
-    }
-    90% {
-      transform: translate(25vw, -500%);
-      width: 30vw;
-    }
-    to {
-      transform: translate(25vw, -500%);
-      width: 30vw;
-    }
+    transform: none;
+    opacity: 1;
   }
 }
 .header .picture {
@@ -571,47 +443,4 @@
   .majieFooter__menu .menu-footer-menu-container .menu .menu-item a {
     font-size: 0.9rem;
   }
-}
-
-body {
-  margin: 0;
-}
-body span,
-body p,
-body h1,
-body h2,
-body h3 {
-  font-family: "Montserrat", sans-serif;
-}
-body p {
-  text-align: justify;
-  margin: 5px 0;
-}
-body h2 {
-  background-color: #0a71b4;
-  color: white;
-  display: inline-block;
-  padding: 4px 15px;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  border-radius: 5px;
-}
-body h3 {
-  display: inline-block;
-  border-bottom: 1px solid #f29400;
-  font-size: 1.4rem;
-  color: #f29400;
-}
-body .btn, body .landing__activities a, .landing__activities body a, body .landing__support a, .landing__support body a, body .landing__contact form p input[type=submit], .landing__contact form p body input[type=submit] {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #f29400;
-  color: white;
-  padding: 3px 10px;
-  border-radius: 14px;
-  margin: 7px;
-  border: none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  line-height: 1.5rem;
 }

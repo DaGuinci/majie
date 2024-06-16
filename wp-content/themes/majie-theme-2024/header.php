@@ -15,11 +15,11 @@ $slider_pictures = get_field('home_slider');
     <div class="header__logo">
       <div class="logo_container">
         <div class="logo_part majie"></div>
-        <div class="logo_part montpellier"></div>
-        <div class="logo_part accueil"></div>
-        <div class="logo_part jeunes"></div>
-        <div class="logo_part isoles"></div>
-        <div class="logo_part etrangers"></div>
+        <div class="logo_part text montpellier"></div>
+        <div class="logo_part text accueil"></div>
+        <div class="logo_part text jeunes"></div>
+        <div class="logo_part text isoles"></div>
+        <div class="logo_part text etrangers"></div>
       </div>
     </div>
     <?php

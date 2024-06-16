@@ -3,7 +3,6 @@ module.exports = function () {
 
     function reveal() {
         var texts = document.querySelectorAll(".landing .reveal");
-        console.log(texts);
         for (var i = 0; i < texts.length; i++) {
           var windowHeight = window.innerHeight;
           var elementTop = texts[i].getBoundingClientRect().top;
