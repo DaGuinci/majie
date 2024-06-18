@@ -5,8 +5,16 @@ module.exports = function () {
         //  little hack to detect if the user is on ie 11
         const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
         // get all the links
-        const links = nav.querySelectorAll('a');
-        // const listOfLinks = document.querySelectorAll("a[href^='#sectionLink");
+        const menu_entries = nav.querySelectorAll('a');
+
+        // add ctas button
+        const ctas = document.querySelectorAll('.cta a');
+
+        let links = [];
+        links.push.apply(links, menu_entries);
+        links.push.apply(links, ctas);
+
+
         // loop over all the links
         links.forEach(function (link) {
             // listen for a click

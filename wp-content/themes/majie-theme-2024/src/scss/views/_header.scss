@@ -2,6 +2,17 @@
   height: 100vh;
   background-color: black;
 
+  &::before {
+    content: '';
+    // background: rgb(69, 47, 16);
+    background: black;
+    z-index: 101;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.6;
+  }
+
   &__logo {
     height: 100%;
     display: flex;
@@ -146,47 +157,46 @@
     }
   }
 
-  .picture {
-    position: relative;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: 65%;
-    opacity: 0;
-    transition: opacity 1s, background-position-x 6s;
+  &__slider {
+    height: 0;
 
-    &:nth-child(even) {
-      background-position-x: 35%;
+    .picture {
+      position: relative;
+      height: 100vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: 65%;
+      opacity: 0;
+      transition: opacity 1s, background-position-x 6s;
+
+      &:nth-child(even) {
+        background-position-x: 35%;
+
+        @media (min-width: $large) {
+          background-position-x: 20%;
+        }
+
+      }
 
       @media (min-width: $large) {
-        background-position-x: 20%;
+        background-size: 120vw;
+
+        &.visible {
+          background-position-x: 80%;
+        }
+
       }
-
-    }
-
-    @media (min-width: $large) {
-      background-size: 120vw;
 
       &.visible {
-        background-position-x: 80%;
+        opacity: 100;
+        background-position-x: 50%;
       }
-
-    }
-
-    &.visible {
-      opacity: 100;
-      background-position-x: 50%;
     }
   }
 
-  &::before {
-    content: '';
-    // background: rgb(69, 47, 16);
-    background: black;
-    z-index: 101;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    opacity: 0.6;
+  &__ctas {
+    overflow: hidden;
+    position: relative;
+    top: -20vh;
   }
 }

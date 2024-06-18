@@ -36,7 +36,7 @@ body {
   .btn {
     display: inline-block;
     text-decoration: none;
-    background-color: #f29400;
+    background-color: $color-secondary;
     color: white;
     padding: 3px 10px;
     border-radius: 14px;
@@ -45,5 +45,60 @@ body {
     font-family: $main-font;
     font-weight: 700;
     line-height: 1.5rem;
+  }
+
+  .cta {
+    @extend .btn;
+    position: relative;
+    right: -100%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    gap: 20px;
+    padding: 10px 15px;
+    animation: cta_entrance .5s ease-out 1.5s;
+    animation-fill-mode: forwards;
+
+    @keyframes cta_entrance {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50vw);
+      }
+
+    }
+
+    svg {
+      max-width: 30px;
+      fill: white;
+      animation: cta_flip 3s ease-in-out 3s infinite;
+
+      @keyframes cta_flip {
+        0% {
+          transform: scale(1)
+        }
+
+        25% {
+          transform: scale(1.5)
+          rotate(30deg)
+        }
+
+        50% {
+          transform: scale(1)
+        }
+
+        100% {
+          transform: scale(1)
+        }
+      }
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+    }
   }
 }
