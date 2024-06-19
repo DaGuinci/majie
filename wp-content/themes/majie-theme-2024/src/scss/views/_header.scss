@@ -10,7 +10,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    opacity: 0.6;
+    opacity: 0.45;
   }
 
   &__logo {
@@ -18,6 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     .logo_container {
       position: relative;
@@ -192,11 +193,5 @@
         background-position-x: 50%;
       }
     }
-  }
-
-  &__ctas {
-    overflow: hidden;
-    position: relative;
-    top: -20vh;
   }
 }
