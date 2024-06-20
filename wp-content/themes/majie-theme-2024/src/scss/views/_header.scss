@@ -39,7 +39,6 @@
 
         &.majie {
           background-image: url('../../dist/images/majie.png');
-
           animation: fadein 1s ease-out;
 
           @keyframes fadein {
@@ -57,13 +56,20 @@
           height: 8vw;
           width: 36vw;
           position: relative;
-          // animation-name: fadein;
+
+          @media (min-width: $medium) {
+            width: 25vw;
+          }
 
           &.montpellier {
             background-image: url('../../dist/images/montpellier2.png');
             top: -15.8vw;
             left: -1vw;
             animation: mtpIn 1s ease-out;
+
+            @media (min-width: $medium) {
+              top: -25.8vw;
+            }
 
             @keyframes mtpIn {
               from {
@@ -84,6 +90,11 @@
             right: -36.23vw;
             animation: accIn 1.2s ease-out;
 
+            @media (min-width: $medium) {
+              top: -33.9vw;
+              right: -23.63vw;
+            }
+
             @keyframes accIn {
               from {
                 transform: scaleX(10) scaleY(10) translate(100vw, -50vw);
@@ -102,6 +113,10 @@
             top: -24vw;
             left: -1.7vw;
             animation: jnIn 1.4s,;
+
+            @media (min-width: $medium) {
+              top: -37vw;
+            }
 
             @keyframes jnIn {
               from {
@@ -122,6 +137,11 @@
             left: 18.6vw;
             animation: isolIn 1.6s,;
 
+            @media (min-width: $medium) {
+              top: -45vw;
+              left: 12.6vw;
+            }
+
             @keyframes isolIn {
               from {
                 transform: scaleX(10) scaleY(10) translate(-25vw, 100vw);
@@ -140,6 +160,11 @@
             top: -39.9vw;
             left: 30.43vw;
             animation: etrIn 1.8s,;
+
+            @media (min-width: $medium) {
+              top: -53vw;
+              left: 21.43vw;
+            }
 
             @keyframes etrIn {
               from {

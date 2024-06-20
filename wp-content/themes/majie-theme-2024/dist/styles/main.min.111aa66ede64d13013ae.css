@@ -104,11 +104,21 @@ body .btn, body .landing__contact form p input[type=submit], .landing__contact f
   width: 36vw;
   position: relative;
 }
+@media (min-width: 768px) {
+  .header__logo .logo_container .logo_part.text {
+    width: 25vw;
+  }
+}
 .header__logo .logo_container .logo_part.text.montpellier {
   background-image: url(../scripts/../images/montpellier2.png);
   top: -15.8vw;
   left: -1vw;
   animation: mtpIn 1s ease-out;
+}
+@media (min-width: 768px) {
+  .header__logo .logo_container .logo_part.text.montpellier {
+    top: -25.8vw;
+  }
 }
 @keyframes mtpIn {
   from {
@@ -126,6 +136,12 @@ body .btn, body .landing__contact form p input[type=submit], .landing__contact f
   right: -36.23vw;
   animation: accIn 1.2s ease-out;
 }
+@media (min-width: 768px) {
+  .header__logo .logo_container .logo_part.text.accueil {
+    top: -33.9vw;
+    right: -23.63vw;
+  }
+}
 @keyframes accIn {
   from {
     transform: scaleX(10) scaleY(10) translate(100vw, -50vw);
@@ -141,6 +157,11 @@ body .btn, body .landing__contact form p input[type=submit], .landing__contact f
   top: -24vw;
   left: -1.7vw;
   animation: jnIn 1.4s;
+}
+@media (min-width: 768px) {
+  .header__logo .logo_container .logo_part.text.jeunes {
+    top: -37vw;
+  }
 }
 @keyframes jnIn {
   from {
@@ -158,6 +179,12 @@ body .btn, body .landing__contact form p input[type=submit], .landing__contact f
   left: 18.6vw;
   animation: isolIn 1.6s;
 }
+@media (min-width: 768px) {
+  .header__logo .logo_container .logo_part.text.isoles {
+    top: -45vw;
+    left: 12.6vw;
+  }
+}
 @keyframes isolIn {
   from {
     transform: scaleX(10) scaleY(10) translate(-25vw, 100vw);
@@ -173,6 +200,12 @@ body .btn, body .landing__contact form p input[type=submit], .landing__contact f
   top: -39.9vw;
   left: 30.43vw;
   animation: etrIn 1.8s;
+}
+@media (min-width: 768px) {
+  .header__logo .logo_container .logo_part.text.etrangers {
+    top: -53vw;
+    left: 21.43vw;
+  }
 }
 @keyframes etrIn {
   from {
