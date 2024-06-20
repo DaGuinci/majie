@@ -73,52 +73,34 @@ body .btn, body .landing__contact form p input[type=submit], .landing__contact f
 .header__logo .logo_container {
   position: relative;
   z-index: 1000;
-  height: 45vw;
-  width: 64%;
+  height: 65vw;
+  width: 79%;
 }
-@media (min-width: 768px) {
-  .header__logo .logo_container {
-    width: 42%;
-  }
+.header__logo .logo_container #majie_logo {
+  width: 100%;
+  overflow: visible;
 }
-.header__logo .logo_container .logo_part {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  animation-duration: 1s;
-}
-.header__logo .logo_container .logo_part.majie {
-  background-image: url(../scripts/../images/majie.png);
-  animation: fadein 1s ease-out;
+.header__logo .logo_container #majie_logo .majie,
+.header__logo .logo_container #majie_logo .orange {
+  background-color: blue;
+  animation: fadein 1.5s ease-out;
 }
 @keyframes fadein {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  50% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
-.header__logo .logo_container .logo_part.text {
-  height: 8vw;
-  width: 36vw;
-  position: relative;
+.header__logo .logo_container #majie_logo path {
+  transform-box: border-box;
 }
-@media (min-width: 768px) {
-  .header__logo .logo_container .logo_part.text {
-    width: 25vw;
-  }
-}
-.header__logo .logo_container .logo_part.text.montpellier {
-  background-image: url(../scripts/../images/montpellier2.png);
-  top: -15.8vw;
-  left: -1vw;
+.header__logo .logo_container #majie_logo .montpellier {
   animation: mtpIn 1s ease-out;
-}
-@media (min-width: 768px) {
-  .header__logo .logo_container .logo_part.text.montpellier {
-    top: -25.8vw;
-  }
 }
 @keyframes mtpIn {
   from {
@@ -130,17 +112,8 @@ body .btn, body .landing__contact form p input[type=submit], .landing__contact f
     opacity: 1;
   }
 }
-.header__logo .logo_container .logo_part.text.accueil {
-  background-image: url(../scripts/../images/accueil2.png);
-  top: -23.93vw;
-  right: -36.23vw;
+.header__logo .logo_container #majie_logo .accueil {
   animation: accIn 1.2s ease-out;
-}
-@media (min-width: 768px) {
-  .header__logo .logo_container .logo_part.text.accueil {
-    top: -33.9vw;
-    right: -23.63vw;
-  }
 }
 @keyframes accIn {
   from {
@@ -152,16 +125,8 @@ body .btn, body .landing__contact form p input[type=submit], .landing__contact f
     opacity: 1;
   }
 }
-.header__logo .logo_container .logo_part.text.jeunes {
-  background-image: url(../scripts/../images/jeunes2.png);
-  top: -24vw;
-  left: -1.7vw;
-  animation: jnIn 1.4s;
-}
-@media (min-width: 768px) {
-  .header__logo .logo_container .logo_part.text.jeunes {
-    top: -37vw;
-  }
+.header__logo .logo_container #majie_logo .jeunes {
+  animation: jnIn 1.4s ease-out;
 }
 @keyframes jnIn {
   from {
@@ -173,17 +138,8 @@ body .btn, body .landing__contact form p input[type=submit], .landing__contact f
     opacity: 1;
   }
 }
-.header__logo .logo_container .logo_part.text.isoles {
-  background-image: url(../scripts/../images/isoles2.png);
-  top: -31.9vw;
-  left: 18.6vw;
-  animation: isolIn 1.6s;
-}
-@media (min-width: 768px) {
-  .header__logo .logo_container .logo_part.text.isoles {
-    top: -45vw;
-    left: 12.6vw;
-  }
+.header__logo .logo_container #majie_logo .isoles {
+  animation: isolIn 1.6s ease-out;
 }
 @keyframes isolIn {
   from {
@@ -195,17 +151,8 @@ body .btn, body .landing__contact form p input[type=submit], .landing__contact f
     opacity: 1;
   }
 }
-.header__logo .logo_container .logo_part.text.etrangers {
-  background-image: url(../scripts/../images/etrangers2.png);
-  top: -39.9vw;
-  left: 30.43vw;
-  animation: etrIn 1.8s;
-}
-@media (min-width: 768px) {
-  .header__logo .logo_container .logo_part.text.etrangers {
-    top: -53vw;
-    left: 21.43vw;
-  }
+.header__logo .logo_container #majie_logo .etrangers {
+  animation: etrIn 1.6s ease-out;
 }
 @keyframes etrIn {
   from {

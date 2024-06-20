@@ -23,159 +23,105 @@
     .logo_container {
       position: relative;
       z-index: 1000;
-      height: 45vw;
-      width: 64%;
+      height: 65vw;
+      width: 79%;
 
-      @media (min-width: $medium) {
-        width: 42%;
-      }
+      #majie_logo {
+        width: 100%;
+        overflow: visible;
 
-
-      .logo_part {
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: contain;
-        animation-duration: 1s;
-
-        &.majie {
-          background-image: url('../../dist/images/majie.png');
-          animation: fadein 1s ease-out;
+        .majie,
+        .orange {
+          background-color: blue;
+          animation: fadein 1.5s ease-out;
 
           @keyframes fadein {
+            0% { opacity: 0; }
+            50% {opacity: 0;}
+            100% { opacity: 1; }
+          }
+        }
+
+        path {
+          transform-box: border-box;
+        }
+
+        .montpellier {
+          animation: mtpIn 1s ease-out;
+
+          @keyframes mtpIn {
             from {
+              transform: scaleX(10) scaleY(10) translate(-100vw, -50vw);
               opacity: 0;
             }
 
             to {
+              transform: none;
               opacity: 1;
             }
           }
         }
 
-        &.text {
-          height: 8vw;
-          width: 36vw;
-          position: relative;
+        .accueil {
+          animation: accIn 1.2s ease-out;
 
-          @media (min-width: $medium) {
-            width: 25vw;
-          }
-
-          &.montpellier {
-            background-image: url('../../dist/images/montpellier2.png');
-            top: -15.8vw;
-            left: -1vw;
-            animation: mtpIn 1s ease-out;
-
-            @media (min-width: $medium) {
-              top: -25.8vw;
+          @keyframes accIn {
+            from {
+              transform: scaleX(10) scaleY(10) translate(100vw, -50vw);
+              opacity: 0;
             }
 
-            @keyframes mtpIn {
-              from {
-                transform: scaleX(10) scaleY(10) translate(-100vw, -50vw);
-                opacity: 0;
-              }
-
-              to {
-                transform: none;
-                opacity: 1;
-              }
+            to {
+              transform: none;
+              opacity: 1;
             }
           }
+        }
 
-          &.accueil {
-            background-image: url('../../dist/images/accueil2.png');
-            top: -23.93vw;
-            right: -36.23vw;
-            animation: accIn 1.2s ease-out;
+        .jeunes {
+          animation: jnIn 1.4s ease-out;
 
-            @media (min-width: $medium) {
-              top: -33.9vw;
-              right: -23.63vw;
+          @keyframes jnIn {
+            from {
+              transform: scaleX(10) scaleY(10) translate(-100vw, 50vw);
+              opacity: 0;
             }
 
-            @keyframes accIn {
-              from {
-                transform: scaleX(10) scaleY(10) translate(100vw, -50vw);
-                opacity: 0;
-              }
-
-              to {
-                transform: none;
-                opacity: 1;
-              }
+            to {
+              transform: none;
+              opacity: 1;
             }
           }
+        }
 
-          &.jeunes {
-            background-image: url('../../dist/images/jeunes2.png');
-            top: -24vw;
-            left: -1.7vw;
-            animation: jnIn 1.4s,;
+        .isoles {
+          animation: isolIn 1.6s ease-out;
 
-            @media (min-width: $medium) {
-              top: -37vw;
+          @keyframes isolIn {
+            from {
+              transform: scaleX(10) scaleY(10) translate(-25vw, 100vw);
+              opacity: 0;
             }
 
-            @keyframes jnIn {
-              from {
-                transform: scaleX(10) scaleY(10) translate(-100vw, 50vw);
-                opacity: 0;
-              }
-
-              to {
-                transform: none;
-                opacity: 1;
-              }
+            to {
+              transform: none;
+              opacity: 1;
             }
           }
+        }
 
-          &.isoles {
-            background-image: url('../../dist/images/isoles2.png');
-            top: -31.9vw;
-            left: 18.6vw;
-            animation: isolIn 1.6s,;
+        .etrangers {
+          animation: etrIn 1.6s ease-out;
 
-            @media (min-width: $medium) {
-              top: -45vw;
-              left: 12.6vw;
+          @keyframes etrIn {
+            from {
+              transform: scaleX(10) scaleY(10) translate(100vw, 50vw);
+              opacity: 0;
             }
 
-            @keyframes isolIn {
-              from {
-                transform: scaleX(10) scaleY(10) translate(-25vw, 100vw);
-                opacity: 0;
-              }
-
-              to {
-                transform: none;
-                opacity: 1;
-              }
-            }
-          }
-
-          &.etrangers {
-            background-image: url('../../dist/images/etrangers2.png');
-            top: -39.9vw;
-            left: 30.43vw;
-            animation: etrIn 1.8s,;
-
-            @media (min-width: $medium) {
-              top: -53vw;
-              left: 21.43vw;
-            }
-
-            @keyframes etrIn {
-              from {
-                transform: scaleX(10) scaleY(10) translate(100vw, 50vw);
-                opacity: 0;
-              }
-
-              to {
-                transform: none;
-                opacity: 1;
-              }
+            to {
+              transform: none;
+              opacity: 1;
             }
           }
         }
@@ -201,7 +147,6 @@
         @media (min-width: $large) {
           background-position-x: 20%;
         }
-
       }
 
       @media (min-width: $large) {
@@ -210,7 +155,6 @@
         &.visible {
           background-position-x: 80%;
         }
-
       }
 
       &.visible {

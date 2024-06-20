@@ -14,16 +14,11 @@ $slider_pictures = get_field('home_slider');
   <section class="header">
     <div class="header__logo">
       <div class="logo_container">
-        <div class="logo_part majie"></div>
-        <div class="logo_part text montpellier"></div>
-        <div class="logo_part text accueil"></div>
-        <div class="logo_part text jeunes"></div>
-        <div class="logo_part text isoles"></div>
-        <div class="logo_part text etrangers"></div>
+      <?php include("dist/images/majie-logo.svg"); ?>
       </div>
     </div>
     <?php
-      if ($slider_pictures) { ?>
+    if ($slider_pictures) { ?>
       <div class="header__slider">
         <?php $i = 0;
         foreach ($slider_pictures as $slider_picture => $url) {
@@ -32,15 +27,15 @@ $slider_pictures = get_field('home_slider');
             $z = 100-$i;
             ?>
             <div class="picture" style="
-              background-image:url(<?= $url ?>);
-              transform: translateY(<?= $trans ?>);
-              z-index: <?= $z ?>;
-              ">
+            background-image:url(<?= $url ?>);
+            transform: translateY(<?= $trans ?>);
+            z-index: <?= $z ?>;
+            ">
             </div>
             <?php
             $i ++;
           }
         } ?>
       </div>
-      <?php } ?>
+    <?php } ?>
   </section>
