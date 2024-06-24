@@ -1,18 +1,18 @@
 module.exports = function () {
-    const nav = document.querySelector('.landing_menu');
+    const nav = document.querySelector('.landing__menu');
 
     document.addEventListener("DOMContentLoaded", () => {
         //  little hack to detect if the user is on ie 11
         const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
         // get all the links
-        const menu_entries = nav.querySelectorAll('a');
+        const links = nav.querySelectorAll('a');
 
         // add ctas button
-        const ctas = document.querySelectorAll('.cta a');
+        // const ctas = document.querySelectorAll('.cta a');
 
-        let links = [];
-        links.push.apply(links, menu_entries);
-        links.push.apply(links, ctas);
+        // let links = [];
+        // links.push.apply(links, menu_entries);
+        // links.push.apply(links, ctas);
 
 
         // loop over all the links

@@ -66,281 +66,282 @@
   }
 }
 
-.landing_menu {
-  top: 0;
-  z-index: 100;
-  display: flex;
-  row-gap: 10px;
-  flex-wrap: wrap;
-  column-gap: 30px;
-  padding: 15px 0;
-  justify-content: center;
-  position: sticky;
-  background-color: #e2dac2;
-  transition: all 1s;
-
-  // &.fixed {
-  //   font-size: .7rem;
-  //   row-gap: 10px;
-  // }
-
-  &::after {
-    content: "";
-    width: 80%;
-    height: 2px;
-    background-color: $color-primary;
-    bottom: 0;
-    position: absolute;
-  }
-
-  a {
-    color: $color-primary;
-    text-decoration: none;
-    font-family: $main-font;
-    // flex-basis: 33%;
-  }
-}
-
 .landing {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 40px 0;
 
-  .reveal {
-    opacity: 0;
-    transform: translateY(20vh);
-    visibility: hidden;
-    transition: opacity 1s ease-out, transform .6s ease-out;
+  @media (max-width: $large) {
+  }
 
-    &.is-visible {
-      opacity: 1;
-      transform: none;
-      visibility: visible;
+  &__menu {
+    top: 0;
+    z-index: 100;
+    display: flex;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    padding: 15px 0;
+    justify-content: center;
+    position: sticky;
+    background-color: #e2dac2;
+    transition: all 1s;
+
+    &::after {
+      content: "";
+      width: 80%;
+      height: 2px;
+      background-color: $color-primary;
+      bottom: 0;
+      position: absolute;
+    }
+
+    a {
+      color: $color-primary;
+      text-decoration: none;
+      font-family: $main-font;
     }
   }
 
-  h2.reveal {
-    opacity: 0;
-    transform: translateX(-100%);
-    visibility: hidden;
-    transition: opacity 1s ease-out, transform .6s ease-out;
-
-    &.is-visible {
-      opacity: 1;
-      transform: none;
-      visibility: visible;
-    }
-  }
-
-  &__news {
-
-    &__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      img {
-        margin: 15px 0;
-      }
-    }
-  }
-
-  &__activities {
-
-    p {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      a {
-        @extend .btn;
-        margin: 7px 20px 7px 7px;
-      }
-    }
-
-  }
-
-  &__partners {
+  &__content {
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    padding: 40px 0;
 
-    h3 {
-      margin: auto;
-    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20vh);
+      visibility: hidden;
+      transition: opacity 1s ease-out, transform .6s ease-out;
 
-    &__work,
-    &__funders
-    {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-
-      .work_partners,
-      .funders_partners
-      {
-        display: flex;
-        position: relative;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-
-        .partner {
-          max-width: 25%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: black;
-          font-weight: 900;
-
-          &__logo {
-            width: 100%;
-            max-width: 80px;
-            flex-grow: 1;
-            object-fit: contain;
-          }
-
-          &__name {
-            text-align: center;
-          }
-        }
-      }
-
-      .add_text {
-        text-align: center;
+      &.is-visible {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
       }
     }
 
-    &__links,
-    &__find_us {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
+    h2.reveal {
+      opacity: 0;
+      transform: translateX(-100%);
+      visibility: hidden;
+      transition: opacity 1s ease-out, transform .6s ease-out;
 
-      .links {
+      &.is-visible {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+      }
+    }
+
+    &__news {
+
+      &__content {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
 
-        .link {
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          flex-direction: column;
-
-          &__logo {
-            max-width: 200px;
-          }
-
-          &__excerpt {
-            text-align: center;
-          }
+        img {
+          margin: 15px 0;
         }
       }
     }
-  }
 
-  &__support {
-    a {
-      @extend .btn;
-    }
-  }
-
-  &__contact {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-
-    .infos {
-      max-width: 80%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-      .contact_item {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-
-        .icon {
-          width: 25px;
-          height: 25px;
-          margin-top: 7px;
-          background-repeat: no-repeat;
-          // filter generated with https://isotropic.co/tool/hex-color-to-css-filter/
-          filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6)) invert(54%) sepia(92%) saturate(1672%) hue-rotate(6deg) brightness(101%) contrast(102%);
-        }
-
-        .content {
-          margin: 0;
-        }
-
-        .email {
-          color: $color-secondary;
-        }
-      }
-
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
+    &__activities {
 
       p {
-        max-width: 100%;
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
 
-        label {
-          span {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            // border: none;
-
-            input {
-              box-sizing: border-box;
-              max-width: 95%;
-              border: none;
-              border-bottom: 2px solid $color-primary;
-              transition: all .5s;
-
-              &:focus {
-                max-width: 100%;
-                font-size: 1rem;
-                outline: none;
-                box-shadow: 2px 2px 5px 0px $color-primary;
-              }
-            }
-
-            textarea {
-              border: 1px solid $color-primary;
-              transition: all .5s;
-              box-sizing: border-box;
-              max-width: 95%;
-
-              &:focus {
-                max-width: 100%;
-                font-size: 1rem;
-                outline: none;
-                box-shadow: 2px 2px 5px 0px $color-primary;
-              }
-            }
-          }
-        }
-        input[type="submit"] {
+        a {
           @extend .btn;
+          margin: 7px 20px 7px 7px;
         }
       }
 
-      .wpcf7-response-output {
-        margin: 0;
+    }
+
+    &__partners {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      h3 {
+        margin: auto;
+      }
+
+      &__work,
+      &__funders
+      {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .work_partners,
+        .funders_partners
+        {
+          display: flex;
+          position: relative;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 25px;
+
+          .partner {
+            max-width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            font-weight: 900;
+
+            &__logo {
+              width: 100%;
+              max-width: 80px;
+              flex-grow: 1;
+              object-fit: contain;
+            }
+
+            &__name {
+              text-align: center;
+            }
+          }
+        }
+
+        .add_text {
+          text-align: center;
+        }
+      }
+
+      &__links,
+      &__find_us {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .links {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-direction: column;
+
+            &__logo {
+              max-width: 200px;
+            }
+
+            &__excerpt {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    &__support {
+      a {
+        @extend .btn;
+      }
+    }
+
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      &__infos {
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .contact_item {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          .icon {
+            width: 25px;
+            height: 25px;
+            margin-top: 7px;
+            background-repeat: no-repeat;
+            // filter generated with https://isotropic.co/tool/hex-color-to-css-filter/
+            filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6)) invert(54%) sepia(92%) saturate(1672%) hue-rotate(6deg) brightness(101%) contrast(102%);
+          }
+
+          .content {
+            margin: 0;
+          }
+
+          .email {
+            color: $color-secondary;
+          }
+        }
+
+      }
+
+      &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        p {
+          max-width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          label {
+            span {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              // border: none;
+
+              input {
+                box-sizing: border-box;
+                max-width: 95%;
+                border: none;
+                border-bottom: 2px solid $color-primary;
+                transition: all .5s;
+
+                &:focus {
+                  max-width: 100%;
+                  font-size: 1rem;
+                  outline: none;
+                  box-shadow: 2px 2px 5px 0px $color-primary;
+                }
+              }
+
+              textarea {
+                border: 1px solid $color-primary;
+                transition: all .5s;
+                box-sizing: border-box;
+                max-width: 95%;
+
+                &:focus {
+                  max-width: 100%;
+                  font-size: 1rem;
+                  outline: none;
+                  box-shadow: 2px 2px 5px 0px $color-primary;
+                }
+              }
+            }
+          }
+          input[type="submit"] {
+            @extend .btn;
+          }
+        }
+
+        .wpcf7-response-output {
+          margin: 0;
+        }
       }
     }
   }
