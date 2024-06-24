@@ -36,12 +36,16 @@ module.exports = function () {
                 if (isIE11) {
                     window.scrollTo(0, target.offsetTop);
                 } else {
+                    let targetTop = target.offsetTop;
+                    if (window.innerWidth<1070) {
+                        targetTop -= 82;
+                    }
                     window.scroll({
                         behavior: 'smooth',
                         left: 0,
                         // top gets the distance from the top of the page of our target element
                         // top: 1400
-                        top: target.offsetTop - 82
+                        top: targetTop
                     });
                 }
             })
