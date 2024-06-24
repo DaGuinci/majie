@@ -381,8 +381,13 @@ body .btn, body .landing__content__contact__form p input[type=submit], .landing_
   align-items: center;
   justify-content: space-between;
 }
+@media (min-width: 1070px) {
+  .landing__content__activities p {
+    justify-content: flex-start;
+  }
+}
 .landing__content__activities p a {
-  margin: 7px 20px 7px 7px;
+  margin: 7px 20px 7px 7px !important;
 }
 .landing__content__partners {
   display: flex;
