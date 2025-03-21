@@ -3,7 +3,7 @@ vendor/
 MYREADME.md
 .htaccess
 
-/wp-admin/
+# /wp-admin/
 /wp-content/index.php
 /wp-content/languages
 # /wp-includes/
