@@ -1,6 +1,8 @@
 .env
 vendor/
 MYREADME.md
+.htaccess
+info.php
 
 /wp-admin/
 /wp-content/index.php
@@ -27,4 +29,9 @@ MYREADME.md
 
 # htaccess
 /.htaccess
-.htaccess
+
+# npm
+node_modules/
+package.json
+package-lock.json
+webpack.config.js

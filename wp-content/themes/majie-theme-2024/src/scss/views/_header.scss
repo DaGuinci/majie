@@ -1,0 +1,166 @@
+.header {
+  height: 100vh;
+  background-color: black;
+
+  &::before {
+    content: '';
+    background: black;
+    z-index: 101;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.45;
+  }
+
+  &__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+
+    .logo_container {
+      position: relative;
+      z-index: 1000;
+      width: 79%;
+
+      #majie_logo {
+        width: 100%;
+        overflow: visible;
+
+        .majie,
+        .orange {
+          background-color: blue;
+          animation: fadein 1.5s ease-out;
+
+          @keyframes fadein {
+            0% { opacity: 0; }
+            50% {opacity: 0;}
+            100% { opacity: 1; }
+          }
+        }
+
+        path {
+          transform-box: border-box;
+        }
+
+        .montpellier {
+          animation: mtpIn 1s ease-out;
+
+          @keyframes mtpIn {
+            from {
+              transform: scaleX(10) scaleY(10) translate(-100vw, -50vw);
+              opacity: 0;
+            }
+
+            to {
+              transform: none;
+              opacity: 1;
+            }
+          }
+        }
+
+        .accueil {
+          animation: accIn 1.2s ease-out;
+
+          @keyframes accIn {
+            from {
+              transform: scaleX(10) scaleY(10) translate(100vw, -50vw);
+              opacity: 0;
+            }
+
+            to {
+              transform: none;
+              opacity: 1;
+            }
+          }
+        }
+
+        .jeunes {
+          animation: jnIn 1.4s ease-out;
+
+          @keyframes jnIn {
+            from {
+              transform: scaleX(10) scaleY(10) translate(-100vw, 50vw);
+              opacity: 0;
+            }
+
+            to {
+              transform: none;
+              opacity: 1;
+            }
+          }
+        }
+
+        .isoles {
+          animation: isolIn 1.6s ease-out;
+
+          @keyframes isolIn {
+            from {
+              transform: scaleX(10) scaleY(10) translate(-25vw, 100vw);
+              opacity: 0;
+            }
+
+            to {
+              transform: none;
+              opacity: 1;
+            }
+          }
+        }
+
+        .etrangers {
+          animation: etrIn 1.6s ease-out;
+
+          @keyframes etrIn {
+            from {
+              transform: scaleX(10) scaleY(10) translate(100vw, 50vw);
+              opacity: 0;
+            }
+
+            to {
+              transform: none;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__slider {
+    height: 0;
+
+    .picture {
+      position: relative;
+      height: 100vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: 65%;
+      opacity: 0;
+      transition: opacity 1s, background-position-x 6s;
+
+      &:nth-child(even) {
+        background-position-x: 35%;
+
+        @media (min-width: $large) {
+          background-position-x: 20%;
+        }
+      }
+
+      @media (min-width: $large) {
+        // background-size: auto 120vh;
+        // background-size: 120vw auto;
+
+        &.visible {
+          background-position-x: 80%;
+        }
+      }
+
+      &.visible {
+        opacity: 100;
+        background-position-x: 50%;
+      }
+    }
+  }
+}

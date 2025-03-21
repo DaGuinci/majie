@@ -1,0 +1,55 @@
+// color =======================
+$red:              #f44336;
+$blue:             #267fff;
+$green:            #4caf50;
+$orange:           #ee9b00;
+
+// monochrome ==================
+$grey:             #767676;
+
+$dark-grey:        #333333;
+$medium-grey:      #cacaca;
+$light-grey:       #fcf9f5;
+
+$white:            #ffffff;
+$black:            #000000;
+
+// mains color =================
+$color-primary:   #0a71b4;
+$color-secondary: #f29400;
+$color-tertiary:  #e2dac2;
+
+
+// Screen sizes ==================
+$xsmall: 0; // 576px
+$small: 576px;
+$medium: 768px;
+$large: 1070px;
+$xlarge: 1280px;
+$xxlarge: 1440px;
+
+
+// font-weight ==================
+$font-thin:        100;
+$font-extra-light: 200;
+$font-light:       300;
+$font-regular:     400;
+$font-medium:      500;
+$font-semi-bold:   600;
+$font-bold:        700;
+$font-extra-bold:  800;
+$font-black:       900;
+
+// misc ==========================
+$main-font:        'Montserrat', sans-serif;
+$main-font-bold:   'Cera PRO bold', sans-serif;
+$secondary-font:   'SilkSerif Medium', sans-serif;
+
+@font-face {
+  font-family:   'Montserrat';
+  // font-weight:   700;
+  font-style:    normal;
+  src: url('../../dist/fonts/brandon_reg-webfont.woff2') format("woff2"),
+      url('../../dist/fonts/brandon_reg-webfont.woff') format("woff");
+  font-display: swap;
+}
