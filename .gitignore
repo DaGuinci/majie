@@ -7,7 +7,7 @@ info.php
 /wp-admin/
 /wp-content/index.php
 /wp-content/languages
-# /wp-includes/
+/wp-includes/
 /index.php
 /license.txt
 /readme.html
