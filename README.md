@@ -3,7 +3,7 @@
 </p>
 
 # 🌿 majie.org  
-Showcase website for the Majie association, based in Montpellier, France.
+Showcase website for the Majie NGO, based in Montpellier, France.
 
 ![Language](https://img.shields.io/badge/Code-PHP-blue?logo=php)
 ![CMS](https://img.shields.io/badge/WordPress-6.x-lightgrey?logo=wordpress)
@@ -13,7 +13,7 @@ Showcase website for the Majie association, based in Montpellier, France.
 
 ## 📖 Overview
 
-This project is the official website of the **Majie** association, an organization based in Montpellier, France, working in the fields of solidarity and social cohesion.
+This project is the official website of **Majie**, an organization based in Montpellier, France, working in the reception and support of unaccompanied foreign minors.
 
 The goal of the redesign was to:
 - Improve the clarity and accessibility of information
@@ -24,9 +24,9 @@ The goal of the redesign was to:
 
 ## 🖥️ Demo
 
-> 📷 *Screenshot of the site (replace with your local file)*
+> 📷 *Screenshot of the site*
 
-![Demo](assets/screenshot.jpg)
+![Demo](assets/screenshot.png)
 
 ---
 
@@ -44,7 +44,7 @@ This project uses a standard WordPress installation.
 
 ---
 
-## 🧠 Technologies Used
+## 💡 Technologies Used
 
 - 🌀 **WordPress** (custom theme)
 - 🛠️ **PHP** (theme logic & templating)
@@ -58,6 +58,6 @@ This project uses a standard WordPress installation.
 ## 👤 About the Developer
 
 Developed by [**Guillaume Even**](https://evendev.net)  
-[![evendev](https://evendev.net/logo.png)](https://evendev.net)
+[![evendev](https://evendev.net/img/logo.svg)](https://evendev.net)
 
 ---
