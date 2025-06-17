@@ -2,7 +2,7 @@
   <img src="assets/logo.png" alt="Majie Logo" width="150"/>
 </p>
 
-# 🌿 majie.org  
+# 🕊️ majie.org  
 Showcase website for the Majie NGO, based in Montpellier, France.
 
 ![Language](https://img.shields.io/badge/Code-PHP-blue?logo=php)
@@ -57,7 +57,9 @@ This project uses a standard WordPress installation.
 
 ## 👤 About the Developer
 
-Developed by [**Guillaume Even**](https://evendev.net)  
-[![evendev](https://evendev.net/img/logo.svg)](https://evendev.net)
-
----
+<div align="center">
+  <p>Developed by <a href="https://evendev.net"><strong>Guillaume Even</strong></a></p>
+  <a href="https://evendev.net">
+    <img src="https://evendev.net/img/logo.svg" alt="evendev logo" width="100"/>
+  </a>
+</div>
